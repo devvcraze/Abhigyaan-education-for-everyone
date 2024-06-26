@@ -15,5 +15,7 @@
     <string name="sign_up">sign up</string>
     <string name="or_else">or else  </string>
     <string name="sign_up2">sign up</string>
-    <string name="sign_up3">sign up</string>">
+    <string name="sign_up3">sign up</string>
+    <string name="welcome">Welcome!</string>
+    <string name="sign_up_to_get_started">Sign up to get started</string>">
 </resources>
