@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "93553756518",
+    "project_id": "abhigyaan-eb409",
+    "storage_bucket": "abhigyaan-eb409.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93553756518:android:e1260136f04b6703dce0a7",
+        "android_client_info": {
+          "package_name": "com.example.abhigyaan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7BA7jSjxL4WASRlLcu5QG7OZKOik4bwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

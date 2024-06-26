@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Abhigyaan</string>
+    <string name="anubhav">ANUBHAV</string>
+    <string name="hello_there_welcome_back">Hello there ,Welcome Back</string>
+    <string name="todo">TODO</string>
+    <string name="sign_in_to_continue">Sign In to continue</string>
+    <string name="hello_welcome_back">Hello ,Welcome Back</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="submit">Submit</string>
+    <string name="or_sign_in_with">      or sign-in with</string>
+    <string name="google">Google</string>
+    <string name="newgoogle">Google</string>
+    <string name="sign_up">sign up</string>
+    <string name="or_else">or else  </string>
+    <string name="sign_up2">sign up</string>
+    <string name="sign_up3">sign up</string>">
+</resources>

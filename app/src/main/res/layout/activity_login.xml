@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:transitionName="logo_image"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/abhigyaan_logo" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/belleza"
+        android:text="@string/hello_welcome_back"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/bold"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:fontFamily="@font/antic"
+        android:text="@string/sign_in_to_continue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#757575"
+                android:textStyle="bold"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app.endIconMode="password_toogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="@string/password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColorHint="#757575"
+                android:textStyle="bold"
+                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="5dp"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:text="@string/forgot_password"
+            android:textColor="#B71C1C"
+            tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/black"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            tools:ignore="VisualLintButtonSize" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-25dp"
+        android:padding="20dp">
+
+
+        <Button
+            android:id="@+id/google"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="100dp"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:text="@string/newgoogle"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle,RtlHardcoded,TextContrastCheck"
+            />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="70dp"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:text="@string/sign_up3"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle,RtlHardcoded,TextContrastCheck,VisualLintBounds" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>
