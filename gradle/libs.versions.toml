@@ -12,6 +12,8 @@ materialVersion = "1.0.0"
 googleMaterial = "1.9.0"
 glide = "5.0.0-rc01"
 playServicesAuth = "21.2.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseDatabase = "21.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -26,7 +28,9 @@ androidx-material = { group = "androidx.compose.material", name = "material", ve
 google-material = { group = "com.google.android.material", name = "material", version.ref = "googleMaterial" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

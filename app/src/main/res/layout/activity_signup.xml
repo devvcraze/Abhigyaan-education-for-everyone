@@ -12,14 +12,18 @@
     tools:ignore="ExtraText">
     <ImageView
         android:layout_width="150dp"
+        android:id="@+id/imageView"
         android:layout_height="150dp"
-        android:src="@drawable/abhigyaan_logo"/>
+        android:src="@drawable/abhigyaan_logo"
+        android:transitionName="logo_image"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
         android:text="@string/welcome"
+        android:id="@id/welcome"
+        android:transitionName="@string/welcome"
         android:textSize="48sp"
         android:textStyle="bold"
         android:layout_marginTop="-20dp"/>
@@ -29,7 +33,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/archivo_black"
         android:text="@string/sign_up_to_get_started"
+        android:transitionName="sign1"
         android:textSize="16sp"
+        android:id="@+id/signup3"
         android:layout_marginTop="5dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full Name"
+            android:transitionName="fullname"
             android:id="@+id/name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
@@ -52,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/username"
+        android:transitionName="username"
         android:hint="Username"
 
         app:counterMaxLength="15"
@@ -66,6 +74,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/email"
         android:hint="Email"
+        android:transitionName="email"
         android:inputType="textEmailAddress"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
@@ -78,6 +87,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:hint="Phone No"
+        android:transitionName="phone"
         android:id="@+id/phone"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
@@ -90,6 +100,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/password_toggle"
         android:hint="Password"
+        android:transitionName="password"
         app:passwordToggleEnabled="true"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <com.google.android.material.textfield.TextInputEditText
@@ -101,6 +112,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
+        android:transitionName="submit"
         android:background="#000"
         android:textColor="#fff"
         android:id="@+id/submit"
@@ -114,6 +126,7 @@
         android:layout_marginTop="5dp"
         android:background="#00000000"
         android:text="Already have an account? Login"
+        android:transitionName="login"
         android:textColor="@color/black"
         tools:ignore="TouchTargetSizeCheck" />
 
