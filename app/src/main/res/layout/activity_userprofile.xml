@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userprofile"
+    tools:ignore="ScrollViewCount">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#AAA1D4"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/google"
+            />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profileImage"
+            android:fontFamily="@font/belleza"
+            android:includeFontPadding="false"
+            android:text="@string/anubhav_chourasia"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profileImage"
+            android:includeFontPadding="false"
+            android:text="Anubhav_chourasia"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:layout_marginTop="-100dp">
+        <com.google.android.material.card.MaterialCardView
+            app:cardBackgroundColor="#FFE57F"
+            android:layout_width="0dp"
+            android:elevation="10dp"
+            android:layout_height="125dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#BA8C9EFF"
+                android:padding="5dp">
+
+
+
+                <TextView
+                    android:id="@+id/students_taught"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/belleza"
+                    android:includeFontPadding="false"
+                    android:text="20"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/materials_uploaded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/students_taught"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/belleza"
+                    android:includeFontPadding="false"
+                    android:text="Materials uploaded"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            app:cardBackgroundColor="#FFE57F"
+            android:layout_width="0dp"
+            android:elevation="10dp"
+            android:layout_height="125dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#BA8C9EFF"
+                android:padding="5dp">
+
+
+
+                <TextView
+                    android:id="@+id/newstudents_taught"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/belleza"
+                    android:includeFontPadding="false"
+                    android:text="20"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/newstudents_taught"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/belleza"
+                    android:includeFontPadding="false"
+                    android:text="Students taught"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:layout_marginBottom="10dp"
+           >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="anubhav_chourasia"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginBottom="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hawentidevi@gmail.com"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:layout_marginBottom="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="9798810492"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_marginBottom="10dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="anubhav.c"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Profile"
+            android:background="#B388FF"
+            android:fontFamily="@font/belleza"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>
