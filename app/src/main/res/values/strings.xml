@@ -21,5 +21,6 @@
     <string name="phoneno">phoneno</string>
     <string name="anubhav_chourasia">Anubhav Chourasia</string>
     <string name="new_user_sign_up">NEW USER? SIGN UP</string>
-    <string name="login_via_google">Login via Google</string>">
+    <string name="login_via_google">Login via Google</string>
+    <string name="submit2">SUBMIT</string>">
 </resources>

@@ -205,12 +205,14 @@
 
 
         </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:fontFamily="@font/belleza"
             android:text="Update Profile"
-            android:background="#B388FF"
-            android:fontFamily="@font/belleza"/>
+            android:textColor="#311B92" />
 
     </LinearLayout>
 </LinearLayout>

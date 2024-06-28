@@ -44,11 +44,10 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
+            android:id="@+id/usernamemain"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:hint="@string/username">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -60,16 +59,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
+            android:id="@+id/password_togglemain"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app.endIconMode="password_toogle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:hint="@string/password">
+            android:hint="@string/password"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/password_toggle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -99,15 +96,10 @@
             android:backgroundTint="#34563E"
             android:elevation="0dp"
             android:fontFamily="@font/belleza"
-            android:text="SUBMIT"
+            android:onClick="loginUser"
+            android:text="@string/submit2"
             android:textColor="#FFFFFF"
             tools:ignore="RtlHardcoded" />
-
-
-
-
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -117,10 +109,6 @@
         android:layout_marginTop="-25dp"
         android:padding="20dp">
 
-
-
-
-
         <Button
             android:id="@+id/signup"
             android:layout_width="match_parent"
@@ -128,35 +116,16 @@
             android:layout_gravity="end"
             android:layout_marginTop="5dp"
             android:onClick="signup"
-
             android:background="#00000000"
             android:elevation="10dp"
             android:fontFamily="@font/belleza"
             android:text="@string/new_user_sign_up"
             android:textColor="@color/black"
             android:textStyle="bold"
-
-            />
-
-
-
-
-
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="vertical"
-        >
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:background="#00000000"
-            android:text="@string/login_via_google"
-            android:fontFamily="@font/belleza"
-            android:textColor="@color/design_default_color_error"/>
-    </LinearLayout>
+</LinearLayout>
 
 
-    </LinearLayout>
+
+
