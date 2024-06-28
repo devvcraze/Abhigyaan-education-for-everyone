@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -61,7 +60,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutPassword"
+            android:id="@+id/username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app.endIconMode="password_toogle"
             android:layout_width="match_parent"
@@ -70,7 +69,7 @@
             android:hint="@string/password">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextPassword"
+                android:id="@+id/password_toggle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -86,18 +85,25 @@
             android:layout_margin="5dp"
             android:background="#00000000"
             android:elevation="0dp"
+            android:fontFamily="@font/belleza"
             android:text="@string/forgot_password"
             android:textColor="#B71C1C"
             tools:ignore="RtlHardcoded" />
 
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/mainsubmit"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@color/black"
-            android:text="@string/submit"
-            android:textColor="@color/white"
-            tools:ignore="VisualLintButtonSize" />
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:backgroundTint="#34563E"
+            android:elevation="0dp"
+            android:fontFamily="@font/belleza"
+            android:text="SUBMIT"
+            android:textColor="#FFFFFF"
+            tools:ignore="RtlHardcoded" />
+
+
 
 
 
@@ -112,35 +118,44 @@
         android:padding="20dp">
 
 
-        <Button
-            android:id="@+id/google"
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="100dp"
-            android:background="@color/white"
-            android:elevation="10dp"
-            android:text="@string/newgoogle"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            tools:ignore="ButtonStyle,RtlHardcoded,TextContrastCheck"
-            />
+
+
 
         <Button
             android:id="@+id/signup"
-            android:layout_width="130dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="70dp"
-            android:background="@color/white"
-            android:elevation="10dp"
-            android:text=" Sign up         "
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            tools:ignore="ButtonStyle,HardcodedText,RtlHardcoded,TextContrastCheck,VisualLintBounds,TextSizeCheck" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:onClick="signup"
 
+            android:background="#00000000"
+            android:elevation="10dp"
+            android:fontFamily="@font/belleza"
+            android:text="@string/new_user_sign_up"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+            />
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        >
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#00000000"
+            android:text="@string/login_via_google"
+            android:fontFamily="@font/belleza"
+            android:textColor="@color/design_default_color_error"/>
     </LinearLayout>
 
 

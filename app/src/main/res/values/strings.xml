@@ -19,5 +19,7 @@
     <string name="welcome">Welcome!</string>
     <string name="sign_up_to_get_started">Sign up to get started</string>
     <string name="phoneno">phoneno</string>
-    <string name="anubhav_chourasia">Anubhav Chourasia</string>">
+    <string name="anubhav_chourasia">Anubhav Chourasia</string>
+    <string name="new_user_sign_up">NEW USER? SIGN UP</string>
+    <string name="login_via_google">Login via Google</string>">
 </resources>

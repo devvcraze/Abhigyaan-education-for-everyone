@@ -30,6 +30,81 @@ public class SIGNUP extends AppCompatActivity {
     TextInputLayout name,username,email,phone,password_toggle;
     FirebaseDatabase rootNode;
     DatabaseReference reference;
+    private Boolean validateName(){
+        String val=name.getEditText().getText().toString();
+        if(val.isEmpty()){
+            name.setError("Field cannot be empty");
+            return false;
+        }
+        else {
+            name.setError(null);
+            name.setErrorEnabled(false);
+            return true;
+        }
+    }
+    private Boolean validateUsername(){
+        String val=username.getEditText().getText().toString();
+        String noWhiteSpace="\\A\\w{4,20}\\z";
+        if(val.isEmpty()){
+            username.setError("Field cannot be empty");
+            return false;
+        } else if (val.length()>=15) {
+            username.setError("Username too long");
+            return false;
+            
+        } else if (!val.matches(noWhiteSpace)) {
+            username.setError("Whitespaces are not allowed");
+            return false;
+
+        } else {
+            username.setError(null);
+            username.setErrorEnabled(false);
+            return true;
+        }
+    }
+    private Boolean validateEmail(){
+        String val = email.getEditText().getText().toString();
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        if (val.isEmpty()) {
+            email.setError("Field cannot be empty");
+            return false;
+        } else if (!val.matches(emailPattern)) {
+            email.setError("Invalid email address");
+            return false;
+        } else {
+            email.setError(null); // Corrected this line
+            return true;
+        }
+    }
+
+    private Boolean validatePhoneNo(){
+        String val=phone.getEditText().getText().toString();
+        if(val.isEmpty()){
+            phone.setError("Field cannot be empty");
+            return false;
+        }
+        else {
+            phone.setError(null);
+            return true;
+        }
+    }
+    private Boolean validatePassword(){
+        String val=password_toggle.getEditText().getText().toString();
+        String passwordPattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
+        if(val.isEmpty()){
+            password_toggle.setError("Field cannot be empty");
+            return false;
+        }
+        else if (!val.matches(passwordPattern)) {
+            password_toggle.setError("Password is too weak");
+            return false;
+        }
+        else {
+            password_toggle.setError(null);
+            return true;
+        }
+    }
 
 
     @Override
@@ -37,6 +112,7 @@ public class SIGNUP extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signup);
+       
 
         password_toggle=findViewById(R.id.password_toggle);
         username=findViewById(R.id.username);
@@ -49,6 +125,9 @@ public class SIGNUP extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(!validateName() | !validateUsername() | !validateEmail() | !validatePhoneNo() | !validatePassword()){
+                    return;
+                }
                 String name1 = Objects.requireNonNull(name.getEditText()).getText().toString();
                 String phone1 = Objects.requireNonNull(phone.getEditText()).getText().toString();
                 String email1 = Objects.requireNonNull(email.getEditText()).getText().toString();
