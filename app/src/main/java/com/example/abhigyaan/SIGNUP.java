@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -129,6 +130,7 @@ public class SIGNUP extends AppCompatActivity {
 
                 if (!name1.isEmpty() && !phone1.isEmpty() && !email1.isEmpty() && !username1.isEmpty() && !password.isEmpty()) {
                     helperclass user = new helperclass(name1, username1, email1, phone1, password);
+                    Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
                     rootNode = FirebaseDatabase.getInstance();
                     reference = rootNode.getReference("Users");
                     reference.child(username1).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
