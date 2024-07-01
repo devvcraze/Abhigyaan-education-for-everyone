@@ -1,4 +1,4 @@
-package com.example.abhigyaan;
+/*package com.example.abhigyaan;
 
 import android.os.Bundle;
 import android.view.View;
@@ -156,4 +156,4 @@ public class SIGNUP extends AppCompatActivity {
             return insets;
         });
     }
-}
+}*/

@@ -43,9 +43,16 @@ dependencies {
     implementation(libs.google.material)
     implementation(libs.glide)
     implementation(libs.firebase.database)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.google.android.gms:play-services-auth:21.2.0")
+   /* implementation("com.google.firebase-auth:23.0.0")
+    implementation("com.google.andriod.gms:play-services-auth:21.1.1")
+    implementation ("com.google.android.gms:play-services-auth:20.5.0")
+    implementation ("com.google.firebase:firebase-auth:22.0.0")
+    implementation ("com.google.firebase:firebase-auth:21.0.1")
+    implementation("com.example.library:1.0.0")*/
+
 
 }

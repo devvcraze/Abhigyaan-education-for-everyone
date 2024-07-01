@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_1"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_verticals"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:elevation="8dp"
+        android:onClick="onCardClick"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/verticals_text"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_vertical"
+            android:gravity="center"
+            android:text="Verticals"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_events"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:elevation="8dp"
+        android:onClick="onCardClick"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/events_text"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_events"
+            android:gravity="center"
+            android:text="Events"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:elevation="8dp"
+        android:onClick="onCardClick"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gallery_text"
+            android:background="@drawable/gradient_gallery"
+            android:gravity="center"
+            android:text="Gallery"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_about"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:elevation="8dp"
+        android:onClick="onCardClick"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_about"
+            android:gravity="center"
+            android:id="@+id/about_text"
+            android:text="About Abhigyaan"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_coordination"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:elevation="8dp"
+        android:onClick="onCardClick"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_coordination"
+            android:gravity="center"
+            android:id="@+id/coordination_text"
+            android:text="Coordinating Committee"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:elevation="8dp"
+        android:onClick="onCardClick"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_feedback"
+            android:gravity="center"
+            android:text="Feedback Page"
+            android:id="@+id/feedback_text"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

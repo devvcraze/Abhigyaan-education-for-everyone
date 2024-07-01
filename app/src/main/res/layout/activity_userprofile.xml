@@ -32,7 +32,7 @@
             />
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/full_name_profile_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -47,7 +47,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text"
+            android:id="@+id/full_name_profile_label2"
+            android:layout_below="@+id/full_name_profile_label"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/profileImage"
@@ -162,6 +163,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/full_name_profile"
                 android:text="anubhav_chourasia"/>
 
 
@@ -175,6 +177,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/email_profile"
                 android:text="hawentidevi@gmail.com"/>
 
 
@@ -188,6 +191,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/phone_profile"
                 android:text="9798810492"/>
 
 
@@ -195,6 +199,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/pasword_profile"
             android:hint="Password"
             android:layout_marginBottom="10dp"
             >

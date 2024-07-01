@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "93553756518",
+    "firebase_url": "https://abhigyaan-eb409-default-rtdb.firebaseio.com",
     "project_id": "abhigyaan-eb409",
     "storage_bucket": "abhigyaan-eb409.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.abhigyaan"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "93553756518-14u770dnblh62f96jsm7ecphoegkhn95.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.abhigyaan",
+            "certificate_hash": "e679fece8cbd77dbc90d9b14eb32fb3b7dddf20b"
+          }
+        },
+        {
+          "client_id": "93553756518-pabvpnnrglcl9lsckn0bs028t0kblpu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC7BA7jSjxL4WASRlLcu5QG7OZKOik4bwI"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93553756518-pabvpnnrglcl9lsckn0bs028t0kblpu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

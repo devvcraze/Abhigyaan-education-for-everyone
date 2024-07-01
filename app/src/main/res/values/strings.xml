@@ -22,5 +22,10 @@
     <string name="anubhav_chourasia">Anubhav Chourasia</string>
     <string name="new_user_sign_up">NEW USER? SIGN UP</string>
     <string name="login_via_google">Login via Google</string>
-    <string name="submit2">SUBMIT</string>">
+    <string name="submit2">SUBMIT</string>
+    <string name="about_abhigyaan">About Abhigyaan</string>
+    <string name="feedback_page">Feedback Page</string>
+    <string name="verticals">Verticals</string>
+    <string name="sign_in_via_google">SIGN IN VIA GOOGLE</string>">
+    <string name="client_id">AIzaSyC7BA7jSjxL4WASRlLcu5QG7OZKOik4bwI</string>
 </resources>
