@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
 //        auth = FirebaseAuth.getInstance();
 
         // Find button by ID
-        btn = findViewById(R.id.btn);
+//        btn = findViewById(R.id.btn);
         newbtn = findViewById(R.id.newbtn);
 
         // Set an OnClickListener on the button

@@ -1,10 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerticalsActivity">
+    tools:context=".VerticalsActivity"
+    tools:ignore="ScrollViewCount"
+    android:background="@drawable/background_1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout4"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_list"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:id="@+id/layout1"
+            android:padding="20dp"
+
+            android:background="@drawable/gradient_list">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/vertical_only"
+                android:layout_height="60dp"
+                android:text="VERTICALS"
+                android:layout_centerHorizontal="true"
+                android:textSize="48dp"
+                android:fontFamily="@font/playfair_display"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:paddingTop="20dp"
+                android:text="choose a vertical"
+                android:layout_centerHorizontal="true"
+                android:textSize="24dp"
+                android:fontFamily="@font/playfair_display"
+                android:layout_below="@id/vertical_only"/>
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:layout_marginTop="-35dp">
+            <com.google.android.material.card.MaterialCardView
+                app:cardBackgroundColor="#FFE57F"
+                android:layout_width="0dp"
+                android:elevation="10dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_2"
+                    android:padding="5dp">
+
+
+
+                    <TextView
+                        android:id="@+id/evening_batch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/belleza"
+                        android:includeFontPadding="false"
+                        android:gravity="center"
+                        android:text="EVENING BATCH"
+                        android:textSize="20sp" />
+
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                app:cardBackgroundColor="#FFE57F"
+                android:layout_width="0dp"
+                android:elevation="10dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_2"
+                    android:padding="5dp">
+
+
+
+                    <TextView
+                        android:id="@+id/project_disha"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/belleza"
+                        android:includeFontPadding="false"
+                        android:gravity="center"
+                        android:text="PROJECT DISHA"
+                        android:textSize="20sp" />
+
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:layout_marginTop="-10dp">
+            <com.google.android.material.card.MaterialCardView
+                app:cardBackgroundColor="#FFE57F"
+                android:layout_width="0dp"
+                android:elevation="10dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_2"
+                    android:padding="5dp">
+
+
+
+                    <TextView
+                        android:id="@+id/mess_batch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/belleza"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="MESS BATCH"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                app:cardBackgroundColor="#FFE57F"
+                android:layout_width="0dp"
+                android:elevation="10dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_2"
+                    android:padding="5dp">
+
+
+
+                    <TextView
+                        android:id="@+id/project_lamani"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/belleza"
+                        android:includeFontPadding="false"
+                        android:gravity="center"
+                        android:text="PROJECT LAMANI"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:layout_marginTop="-10dp">
+            <com.google.android.material.card.MaterialCardView
+                app:cardBackgroundColor="#FFE57F"
+                android:layout_width="0dp"
+                android:elevation="10dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_2"
+                    android:padding="5dp">
+
+
+
+                    <TextView
+                        android:id="@+id/english_batch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:fontFamily="@font/belleza"
+                        android:includeFontPadding="false"
+                        android:text="ENGLISH BATCH"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                app:cardBackgroundColor="#FFE57F"
+                android:layout_width="0dp"
+                android:elevation="10dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_2"
+                    android:padding="5dp">
+
+
+
+                    <TextView
+                        android:id="@+id/about_verticals"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/belleza"
+                        android:includeFontPadding="false"
+                        android:gravity="center"
+                        android:text="ABOUT VERTICALS"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+  </ScrollView>
