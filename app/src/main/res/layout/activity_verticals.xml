@@ -73,6 +73,7 @@
                         android:fontFamily="@font/belleza"
                         android:includeFontPadding="false"
                         android:gravity="center"
+                        android:onClick="onClick"
                         android:text="EVENING BATCH"
                         android:textSize="20sp" />
 

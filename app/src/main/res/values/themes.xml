@@ -6,10 +6,20 @@
     </style>
 
     <style name="Theme.Abhigyaan" parent="Base.Theme.Abhigyaan" />
+
     <style name="CircularImageView">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
         <item name="android:windowContentTransitions">true</item>
     </style>
+
+    <style name="Theme.Abhigyaan.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Abhigyaan.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Abhigyaan.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
