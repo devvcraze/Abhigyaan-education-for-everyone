@@ -27,8 +27,9 @@ public class VerticalsActivity extends AppCompatActivity {
         eveningBatchTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 // Navigate to evening_batch activity
-                Intent intent = new Intent(VerticalsActivity.this, EveningBatchActivity.class);
+                Intent intent = new Intent(VerticalsActivity.this, EveningBatchActivity4.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +38,7 @@ public class VerticalsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to project_disha activity
-                Intent intent = new Intent(VerticalsActivity.this, ProjectDishaActivity.class);
+                Intent intent = new Intent(VerticalsActivity.this, ProjectDishaActivity4.class);
                 startActivity(intent);
             }
         });
@@ -46,7 +47,7 @@ public class VerticalsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to mess_batch activity
-                Intent intent = new Intent(VerticalsActivity.this, MessBatchActivity.class);
+                Intent intent = new Intent(VerticalsActivity.this, MessBatchActivity4.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +56,7 @@ public class VerticalsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to project_lamani activity
-                Intent intent = new Intent(VerticalsActivity.this, ProjectLamaniActivity.class);
+                Intent intent = new Intent(VerticalsActivity.this, ProjectLamaniActivity4.class);
                 startActivity(intent);
             }
         });
@@ -64,7 +65,7 @@ public class VerticalsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to english_batch activity
-                Intent intent = new Intent(VerticalsActivity.this, EnglishBatchActivity.class);
+                Intent intent = new Intent(VerticalsActivity.this, EnglishBatchActivity4.class);
                 startActivity(intent);
             }
         });

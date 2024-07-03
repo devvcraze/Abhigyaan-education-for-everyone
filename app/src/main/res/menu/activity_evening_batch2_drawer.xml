@@ -7,13 +7,21 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/volunteer"
-            android:title="@string/menu_home" />
+            android:title="Today's Volunteers" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:icon="@drawable/materials"
+            android:title="materials" />
         <item
             android:id="@+id/nav_slideshow"
+            android:icon="@drawable/updations"
+            android:title="updations" />
+        <item
+            android:id="@+id/nav_substitution"
+            android:icon="@drawable/substitution"
+            android:title="Substitution Requests" />
+        <item
+            android:id="@+id/nav_members"
             android:icon="@drawable/heads"
             android:title="Members" />
     </group>

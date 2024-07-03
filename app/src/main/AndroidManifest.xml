@@ -15,6 +15,41 @@
         android:theme="@style/Theme.Abhigyaan"
         tools:targetApi="31">
         <activity
+            android:name=".EnglishBatchActivity4"
+            android:exported="false"
+            android:label="@string/title_activity_english_batch4"
+            android:theme="@style/Theme.Abhigyaan.NoActionBar" />
+        <activity
+            android:name=".ProjectLamaniActivity4"
+            android:exported="false"
+            android:label="@string/title_activity_project_lamani4"
+            android:theme="@style/Theme.Abhigyaan.NoActionBar" />
+        <activity
+            android:name=".MessBatchActivity4"
+            android:exported="false"
+            android:label="@string/title_activity_mess_batch4"
+            android:theme="@style/Theme.Abhigyaan.NoActionBar" />
+        <activity
+            android:name=".ProjectDishaActivity4"
+            android:exported="false"
+            android:label="@string/title_activity_project_disha4"
+            android:theme="@style/Theme.Abhigyaan.NoActionBar" />
+        <activity
+            android:name=".EveningBatchActivity4"
+            android:exported="false"
+            android:label="@string/title_activity_evening_batch4"
+            android:theme="@style/Theme.Abhigyaan.NoActionBar" />
+        <activity
+            android:name=".EveningBatchActivity3"
+            android:exported="false"
+            android:label="@string/title_activity_evening_batch3"
+            android:theme="@style/Theme.Abhigyaan.NoActionBar" />
+        <activity
+            android:name=".EveningBatchActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_evening_batch2"
+            android:theme="@style/Theme.Abhigyaan.NoActionBar" />
+        <activity
             android:name=".AboutVerticalsActivity"
             android:exported="false" />
         <activity
@@ -25,9 +60,6 @@
             android:exported="false" />
         <activity
             android:name=".MessBatchActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EveningBatchActivity"
             android:exported="false" />
         <activity
             android:name=".VerticalsActivity"

@@ -40,4 +40,15 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="evening_batch">EVENING BATCH</string>
+    <string name="welcome2">Welcome!</string>
+    <string name="todod">TODO</string>
+    <string name="title_activity_evening_batch2">EveningBatchActivity2</string>
+    <string name="title_activity_evening_batch3">EveningBatchActivity3</string>
+    <string name="title_activity_evening_batch4">EveningBatchActivity4</string>
+    <string name="title_activity_project_disha4">ProjectDishaActivity4</string>
+    <string name="title_activity_mess_batch4">MessBatchActivity4</string>
+    <string name="title_activity_project_lamani4">ProjectLamaniActivity4</string>
+    <string name="title_activity_english_batch4">EnglishBatchActivity4</string>
+    <string name="members">members</string>
 </resources>
