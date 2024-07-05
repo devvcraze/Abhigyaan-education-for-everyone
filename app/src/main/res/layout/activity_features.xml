@@ -24,11 +24,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_vertical"
+            android:background="@drawable/background_1"
+            android:elevation="20dp"
+            android:fontFamily="@font/belgrano"
             android:gravity="center"
             android:text="Verticals"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textColor="#794545"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
@@ -46,11 +49,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_events"
+            android:background="@drawable/background_1"
+            android:elevation="20dp"
+            android:fontFamily="@font/belgrano"
             android:gravity="center"
             android:text="Events"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textColor="#794545"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
@@ -68,11 +74,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_gallery"
+            android:background="@drawable/background_1"
+            android:elevation="20dp"
+            android:fontFamily="@font/belgrano"
             android:gravity="center"
             android:text="Gallery"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textColor="#794545"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
@@ -90,11 +99,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_about"
+            android:background="@drawable/background_1"
+            android:elevation="20dp"
+            android:fontFamily="@font/belgrano"
             android:gravity="center"
             android:text="About Abhigyaan"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textColor="#794545"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
@@ -112,11 +124,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_coordination"
+            android:background="@drawable/background_1"
+            android:elevation="20dp"
+            android:fontFamily="@font/belgrano"
             android:gravity="center"
             android:text="Coordinating Committee"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textColor="#794545"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
@@ -134,11 +149,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_feedback"
+            android:background="@drawable/background_1"
+            android:elevation="20dp"
+            android:fontFamily="@font/belgrano"
             android:gravity="center"
             android:text="Feedback Page"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textColor="#794545"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 

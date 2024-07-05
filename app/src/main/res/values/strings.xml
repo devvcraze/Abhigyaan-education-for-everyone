@@ -51,4 +51,14 @@
     <string name="title_activity_project_lamani4">ProjectLamaniActivity4</string>
     <string name="title_activity_english_batch4">EnglishBatchActivity4</string>
     <string name="members">members</string>
+    <string name="title_activity_events1">eventsActivity1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="button">Button</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_newhe">newhe</string>
+    <string name="open">Open the drawer</string>
+    <string name="close">Close the drawer</string>
 </resources>

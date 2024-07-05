@@ -73,6 +73,7 @@
                         android:fontFamily="@font/belleza"
                         android:includeFontPadding="false"
                         android:gravity="center"
+                        android:elevation="20dp"
                         android:onClick="onClick"
                         android:text="EVENING BATCH"
                         android:textSize="20sp" />
@@ -107,6 +108,7 @@
                         android:fontFamily="@font/belleza"
                         android:includeFontPadding="false"
                         android:gravity="center"
+                        android:elevation="20dp"
                         android:text="PROJECT DISHA"
                         android:textSize="20sp" />
 
@@ -145,6 +147,7 @@
                         android:layout_centerInParent="true"
                         android:fontFamily="@font/belleza"
                         android:gravity="center"
+                        android:elevation="20dp"
                         android:includeFontPadding="false"
                         android:text="MESS BATCH"
                         android:textSize="20sp" />
@@ -177,6 +180,7 @@
                         android:fontFamily="@font/belleza"
                         android:includeFontPadding="false"
                         android:gravity="center"
+                        android:elevation="20dp"
                         android:text="PROJECT LAMANI"
                         android:textSize="20sp" />
 
@@ -216,6 +220,7 @@
                         android:fontFamily="@font/belleza"
                         android:includeFontPadding="false"
                         android:text="ENGLISH BATCH"
+                        android:elevation="20dp"
                         android:textSize="20sp" />
 
                 </RelativeLayout>
@@ -246,6 +251,7 @@
                         android:fontFamily="@font/belleza"
                         android:includeFontPadding="false"
                         android:gravity="center"
+                        android:elevation="20dp"
                         android:text="ABOUT VERTICALS"
                         android:textSize="20sp" />
 
