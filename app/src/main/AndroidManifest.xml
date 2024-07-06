@@ -15,6 +15,60 @@
         android:theme="@style/Theme.Material3.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".mem_mess_batch"
+            android:exported="false" />
+        <activity
+            android:name=".gal_mess_batch"
+            android:exported="false" />
+        <activity
+            android:name=".mat_mess_batch"
+            android:exported="false" />
+        <activity
+            android:name=".upd_mess_batch"
+            android:exported="false" />
+        <activity
+            android:name=".sub_mess_batch"
+            android:exported="false" />
+        <activity
+            android:name=".vol_mess_batch"
+            android:exported="false" />
+        <activity
+            android:name=".gal_evening_batch"
+            android:exported="false" />
+        <activity
+            android:name=".mem_evening_batch"
+            android:exported="false" />
+        <activity
+            android:name=".vol_evening_batch"
+            android:exported="false" />
+        <activity
+            android:name=".mat_evening_batch"
+            android:exported="false" />
+        <activity
+            android:name=".upd_evening_batch"
+            android:exported="false" />
+        <activity
+            android:name=".sub_evening_batch"
+            android:exported="false" />
+        <activity
+            android:name=".gal_english_batch"
+            android:exported="false" />
+        <activity
+            android:name=".mem_english_batch"
+            android:exported="false" />
+        <activity
+            android:name=".sub_english_batch"
+            android:exported="false" />
+        <activity
+            android:name=".material_english_batch"
+            android:exported="false" />
+        <activity
+            android:name=".update_english_batch"
+            android:exported="false" />
+        <activity
+            android:name=".volunteer_english_batch"
+            android:exported="false" />
+        <activity
             android:name=".EnglishBatchActivity"
             android:exported="false" />
         <activity

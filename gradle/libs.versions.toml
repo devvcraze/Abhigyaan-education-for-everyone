@@ -19,6 +19,7 @@ lifecycleLivedataKtx = "2.8.2"
 lifecycleViewmodelKtx = "2.8.2"
 navigationFragment = "2.7.7"
 navigationUi = "2.7.7"
+cardview = "1.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -39,6 +40,7 @@ androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecy
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
+cardview = { group = "andriodx.cardview", name = "cardview", version.ref = "cardview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

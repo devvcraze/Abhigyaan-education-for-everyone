@@ -7,13 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/gradient_list"
+    android:background="@drawable/background_3"
     tools:ignore="ScrollViewCount">
     <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/layout4"
         android:layout_height="wrap_content"
-        android:background="@drawable/gradient_list"
+        android:background="@drawable/background_3"
         android:orientation="vertical">
 
     <RelativeLayout
@@ -64,7 +64,7 @@
         android:padding="1dp"
         android:layout_marginTop="-100dp">
         <com.google.android.material.card.MaterialCardView
-            app:cardBackgroundColor="#FFE57F"
+            app:cardBackgroundColor="@color/lavender2"
             android:layout_width="0dp"
             android:elevation="10dp"
             android:layout_height="125dp"
