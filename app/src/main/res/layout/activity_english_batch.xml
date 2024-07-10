@@ -5,222 +5,216 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_4"
-    tools:context=".EnglishBatchActivity"
-    >
+    android:background="@drawable/bac"
+    tools:context=".EnglishBatchActivity">
 
-    <TextView
-        android:id="@+id/main_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/belgrano"
-        android:textColor="@color/black"
-        android:text="ENGLISH BATCH"
-        android:textSize="40dp"
-        android:textStyle="bold" />
-    <GridLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="15dp"
-        android:columnCount="2"
-        android:rowCount="3"
-        android:layout_below="@id/main_text">
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/volun_english"
-            android:layout_row="0"
-            android:layout_column="0"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
-            android:layout_margin="10dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
+        android:layout_height="match_parent">
 
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:src="@drawable/vol"/>
-                <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/main_text"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/belgrano"
+                android:textColor="@color/black"
+                android:text="ENGLISH BATCH"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:columnCount="2"
+                android:rowCount="3">
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Volunteers"
-                    android:fontFamily="@font/belgrano"
-                    android:textSize="20dp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
+                    android:id="@+id/volun_english"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/vol"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Volunteers"
+                            android:fontFamily="@font/belgrano"
+                            android:textSize="20dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:id="@+id/update_english"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
-            android:layout_margin="10dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:src="@drawable/update2"/>
-                <TextView
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Updations"
-                    android:fontFamily="@font/belgrano"
-                    android:textSize="20dp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
+                    android:id="@+id/update_english"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/update2"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Updations"
+                            android:fontFamily="@font/belgrano"
+                            android:textSize="20dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:id="@+id/material_english"
-            android:layout_column="0"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
-            android:layout_margin="10dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:src="@drawable/book"/>
-                <TextView
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Materials"
-                    android:fontFamily="@font/belgrano"
-                    android:textSize="20dp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
+                    android:id="@+id/material_english"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/book"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Materials"
+                            android:fontFamily="@font/belgrano"
+                            android:textSize="20dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:id="@+id/sub_eng"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
-            android:layout_margin="10dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:src="@drawable/subs"/>
-                <TextView
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Substitutions"
-                    android:textSize="20dp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
+                    android:id="@+id/sub_eng"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/subs"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Substitutions"
+                            android:textSize="20dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="0"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
-            android:id="@+id/mem_eng"
-            android:layout_margin="10dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:src="@drawable/team"/>
-                <TextView
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Members"
-                    android:fontFamily="@font/belgrano"
-                    android:textSize="20dp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
+                    android:id="@+id/mem_eng"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/team"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Members"
+                            android:fontFamily="@font/belgrano"
+                            android:textSize="20dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="2"
-            android:layout_column="1"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="20dp"
-            android:id="@+id/gal_eng"
-            android:layout_margin="10dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:src="@drawable/gal"/>
-                <TextView
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gallery"
-                    android:fontFamily="@font/belgrano"
-                    android:textSize="20dp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
+                    android:id="@+id/gal_eng"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="20dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/gal"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gallery"
+                            android:fontFamily="@font/belgrano"
+                            android:textSize="20dp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        </androidx.cardview.widget.CardView>
-    </GridLayout>
+            </GridLayout>
 
+        </LinearLayout>
 
+    </ScrollView>
 
 </RelativeLayout>
