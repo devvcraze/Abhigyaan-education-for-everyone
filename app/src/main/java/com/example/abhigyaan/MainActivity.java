@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 Pair[] pairs=new Pair[1];
                 pairs[0]=new Pair<View,String>(image,"logo_image");
                 ActivityOptions options=ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
-                startActivity(intent,options.toBundle());}
+                startActivity(intent,options.toBundle());
+            finish();}
         },SPLASH_SCREEN);
 
 

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Material3.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".evenotedetails"
+            android:exported="false" />
+        <activity
             android:name=".mat_lamani_batch"
             android:exported="false" />
         <activity
