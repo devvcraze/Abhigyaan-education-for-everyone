@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         top_anim = AnimationUtils.loadAnimation(this, R.anim.top_anim);
         image = findViewById(R.id.imageView);
+
 
         image.setAnimation(top_anim);
         new Handler().postDelayed(new Runnable() {

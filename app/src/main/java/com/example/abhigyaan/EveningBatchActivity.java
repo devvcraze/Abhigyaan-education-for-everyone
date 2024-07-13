@@ -2,6 +2,7 @@ package com.example.abhigyaan;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -25,11 +26,13 @@ import com.google.android.material.navigation.NavigationBarView;
 import java.util.ArrayList;
 
 public class EveningBatchActivity extends AppCompatActivity {
+    Vibrator vibrate;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        vibrate=(Vibrator)getSystemService(VIBRATOR_SERVICE);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_evening_batch);
         CardView cardView = findViewById(R.id.vol_eve);
@@ -37,6 +40,7 @@ public class EveningBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EveningBatchActivity.this,  vol_evening_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -45,6 +49,7 @@ public class EveningBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EveningBatchActivity.this,  upd_evening_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -53,6 +58,7 @@ public class EveningBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EveningBatchActivity.this,  mat_evening_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -61,6 +67,7 @@ public class EveningBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EveningBatchActivity.this,  sub_evening_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -69,6 +76,7 @@ public class EveningBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EveningBatchActivity.this,  mem_evening_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -77,6 +85,7 @@ public class EveningBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EveningBatchActivity.this,  gal_evening_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });

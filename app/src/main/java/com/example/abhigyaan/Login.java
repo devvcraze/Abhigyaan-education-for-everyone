@@ -3,6 +3,7 @@ package com.example.abhigyaan;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,12 +25,14 @@ public class Login extends AppCompatActivity {
     TextInputLayout usernamemain, password_togglemain;
     Button btn;
     Button newbtn;
+    Vibrator vibrate;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        vibrate=(Vibrator)getSystemService(VIBRATOR_SERVICE);
 
         // Initialize Firebase Auth
 //        auth = FirebaseAuth.getInstance();
@@ -44,6 +47,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an Intent to start the new activity
                 Intent intent = new Intent(Login.this, dashboard.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });

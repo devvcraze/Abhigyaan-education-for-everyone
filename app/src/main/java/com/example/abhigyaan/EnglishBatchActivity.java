@@ -2,6 +2,7 @@ package com.example.abhigyaan;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -12,17 +13,20 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class EnglishBatchActivity extends AppCompatActivity {
+    Vibrator vibrate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        vibrate=(Vibrator)getSystemService(VIBRATOR_SERVICE);
         setContentView(R.layout.activity_english_batch);
         CardView cardView = findViewById(R.id.volun_english);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EnglishBatchActivity.this,  volunteer_english_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -31,6 +35,7 @@ public class EnglishBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EnglishBatchActivity.this,  update_english_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -39,6 +44,7 @@ public class EnglishBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EnglishBatchActivity.this,  material_english_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -47,6 +53,7 @@ public class EnglishBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EnglishBatchActivity.this,  sub_english_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -55,6 +62,7 @@ public class EnglishBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EnglishBatchActivity.this,  mem_english_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -63,6 +71,7 @@ public class EnglishBatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EnglishBatchActivity.this,  gal_english_batch.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });

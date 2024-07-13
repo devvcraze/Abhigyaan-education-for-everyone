@@ -2,6 +2,7 @@ package com.example.abhigyaan;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class dashboard extends AppCompatActivity {
     TextView about_text;
     TextView coordination_text;
     TextView feedback_text;
+    Vibrator vibrate;
 
 
 
@@ -26,6 +28,7 @@ public class dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_try);
+        vibrate=(Vibrator)getSystemService(VIBRATOR_SERVICE);
 
         // Initialize the TextView
         verticalsText = findViewById(R.id.verticals_text);
@@ -41,6 +44,7 @@ public class dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an Intent to start the new activity
                 Intent intent = new Intent(dashboard.this, VerticalsActivity.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -49,6 +53,7 @@ public class dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an Intent to start the new activity
                 Intent intent = new Intent(dashboard.this, eventsActivity.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -57,6 +62,7 @@ public class dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an Intent to start the new activity
                 Intent intent = new Intent(dashboard.this, galleryActivity.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -65,6 +71,7 @@ public class dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an Intent to start the new activity
                 Intent intent = new Intent(dashboard.this, aboutActivity.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -73,6 +80,7 @@ public class dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an Intent to start the new activity
                 Intent intent = new Intent(dashboard.this, coordinationActivity.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
@@ -81,6 +89,7 @@ public class dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an Intent to start the new activity
                 Intent intent = new Intent(dashboard.this, feedbackActivity.class);
+                vibrate.vibrate(100);
                 startActivity(intent);
             }
         });

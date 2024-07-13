@@ -1,7 +1,9 @@
 package com.example.abhigyaan;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -65,6 +67,13 @@ public class vol_disha_batch extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        VideoView videoView = findViewById(R.id.videoView);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.back);
+        videoView.setVideoURI(videoUri);
+        videoView.start();
+        videoView.setOnPreparedListener(mediaPlayer -> {
+            mediaPlayer.setLooping(true); // Loop the video
         });
     }
 }
