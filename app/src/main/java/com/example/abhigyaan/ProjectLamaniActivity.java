@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ProjectLamaniActivity extends AppCompatActivity {
-    CardView mat;
+    CardView mat,vol,sub,mem,gal,upd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,30 @@ public class ProjectLamaniActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_project_lamani);
         mat=findViewById(R.id.mat_lamani);
-        mat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ProjectLamaniActivity.this,  mat_lamani_batch.class);
-                startActivity(intent);
-            }
+        sub=findViewById(R.id.sub_lamani);
+        vol=findViewById(R.id.vol_lamani);
+        gal=findViewById(R.id.gal_lamani);
+        mem=findViewById(R.id.mem_lamani);
+        upd=findViewById(R.id.upd_lamani);
+        mat.setOnClickListener(view -> {
+            Intent intent = new Intent(ProjectLamaniActivity.this,  mat_lamani_batch.class);
+            startActivity(intent);
+        });
+        vol.setOnClickListener(view -> {
+            Intent intent = new Intent(ProjectLamaniActivity.this,  vol_lamani_batch.class);
+            startActivity(intent);
+        });
+        gal.setOnClickListener(view -> {
+            Intent intent = new Intent(ProjectLamaniActivity.this,  gal_lamani_batch.class);
+            startActivity(intent);
+        });
+        mem.setOnClickListener(view -> {
+            Intent intent = new Intent(ProjectLamaniActivity.this,  mem_lamani_batch.class);
+            startActivity(intent);
+        });
+        upd.setOnClickListener(view -> {
+            Intent intent = new Intent(ProjectLamaniActivity.this,  upd_lamani_batch.class);
+            startActivity(intent);
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

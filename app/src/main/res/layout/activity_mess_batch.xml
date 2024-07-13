@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/dac"
+        android:background="@drawable/bac"
         tools:context=".MessBatchActivity">
 
         <TextView
@@ -23,7 +23,7 @@
             android:fontFamily="cursive"
             android:text="MESS  BATCH"
             android:textColor="#F6E0E0"
-            android:textSize="50dp"
+            android:textSize="40dp"
             android:textStyle="bold" />
 
         <GridLayout
@@ -233,4 +233,4 @@
         </GridLayout>
 
     </RelativeLayout>
-</ScrollView>
+</RelativeLayout>

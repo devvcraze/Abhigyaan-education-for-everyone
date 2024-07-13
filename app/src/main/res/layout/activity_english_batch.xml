@@ -21,12 +21,12 @@
             <TextView
                 android:id="@+id/main_text"
                 android:layout_width="wrap_content"
-                android:layout_marginBottom="90dp"
+                android:layout_marginBottom="25dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/belgrano"
-                android:textColor="@color/black"
+                android:fontFamily="cursive"
+                android:textColor="#F6E0E0"
                 android:text="ENGLISH BATCH"
                 android:textSize="40dp"
                 android:textStyle="bold" />
@@ -34,7 +34,7 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+
                 android:columnCount="2"
                 android:rowCount="3">
 

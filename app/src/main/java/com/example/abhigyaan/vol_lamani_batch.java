@@ -16,14 +16,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class vol_evening_batch extends AppCompatActivity {
+public class vol_lamani_batch extends AppCompatActivity {
+
     TextView volunteer1, volunteer2, volunteer3, volunteer4, volunteer5, volunteer6, volunteer7, volunteer8, volunteer9, volunteer10,day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_vol_evening_batch);
+        setContentView(R.layout.activity_vol_lamani_batch);
         day=findViewById(R.id.day);
         volunteer1 = findViewById(R.id.member1);
         volunteer2 = findViewById(R.id.member2);
@@ -35,9 +36,8 @@ public class vol_evening_batch extends AppCompatActivity {
         volunteer8 = findViewById(R.id.member8);
         volunteer9 = findViewById(R.id.member9);
         volunteer10 = findViewById(R.id.member10);
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("EVENING BATCH");
+        DatabaseReference myRef = database.getReference("PROJECT LAMANI");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -61,7 +61,6 @@ public class vol_evening_batch extends AppCompatActivity {
                 // Handle possible errors
             }
         });
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

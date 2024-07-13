@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="@color/white"
         android:contentDescription="@string/_20"
         android:src="@drawable/baseline_add_circle_outline_24" />
 

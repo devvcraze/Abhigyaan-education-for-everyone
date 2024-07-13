@@ -15,7 +15,7 @@
         android:layout_marginTop="-15dp"
         android:background="@color/white"
         android:orientation="vertical"
-        tools:context=".vol_evening_batch"
+        tools:context=".vol_lamani_batch"
 
         >
         <androidx.cardview.widget.CardView

@@ -47,30 +47,42 @@
         android:layout_marginVertical="26dp"
         android:backgroundTint="@color/white"
         >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="24dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/notes_title_text"
+                android:hint="NAME OF THE STUDENT"
+                android:textSize="20sp"
+                android:background="@color/white"
+                android:textStyle="bold"
+                android:layout_marginVertical="8dp"
+                android:padding="12dp"
+                android:textColor="@color/black"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="15dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:id="@+id/notes_content_text"
+                android:hint="UPDATE HERE"
+                android:minLines="15"
+                android:background="@color/white"
+                android:gravity="top"
+                android:textSize="20sp"
+                android:layout_marginVertical="8dp"
+                android:padding="12dp"
+                android:textColor="@color/black"/>
+        </androidx.cardview.widget.CardView>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/notes_title_text"
-            android:hint="NAME OF THE STUDENT"
-            android:textSize="20sp"
-            android:background="@color/white"
-            android:textStyle="bold"
-            android:layout_marginVertical="8dp"
-            android:padding="12dp"
-            android:textColor="@color/black"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/notes_content_text"
-            android:hint="UPDATE HERE"
-            android:minLines="15"
-            android:background="@color/white"
-            android:gravity="top"
-            android:textSize="20sp"
-            android:layout_marginVertical="8dp"
-            android:padding="12dp"
-            android:textColor="@color/black"/>
 
 
     </LinearLayout>
