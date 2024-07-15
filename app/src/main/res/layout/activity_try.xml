@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fac"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-15dp"
-        android:background="@drawable/fac"
+
         android:orientation="vertical"
 
         tools:context=".MainActivity">
@@ -185,13 +186,14 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/card_contact"
+            android:onClick="onClick"
             android:layout_width="match_parent"
             android:layout_height="100dp"
 
             android:layout_marginBottom="8dp"
             android:layout_marginHorizontal="8dp"
             android:elevation="8dp"
-            android:onClick="onCardClick"
+
             android:padding="16dp"
             app:cardCornerRadius="16dp">
 
@@ -203,6 +205,7 @@
                 android:fontFamily="@font/belgrano"
                 android:text="Contact Us"
                 android:textStyle="bold"
+
 
                 android:textColor="@color/white"
                 android:textSize="20sp" />

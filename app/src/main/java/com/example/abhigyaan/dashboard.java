@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -21,6 +22,7 @@ public class dashboard extends AppCompatActivity {
     TextView coordination_text;
     TextView feedback_text;
     Vibrator vibrate;
+    CardView contact;
 
 
 
@@ -37,6 +39,7 @@ public class dashboard extends AppCompatActivity {
         about_text=findViewById(R.id.about_text);
         coordination_text=findViewById(R.id.coordination_text);
         feedback_text=findViewById(R.id.feedback_text);
+        contact=findViewById(R.id.card_contact);
 
         // Set OnClickListener
         verticalsText.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +92,15 @@ public class dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 // Create an Intent to start the new activity
                 Intent intent = new Intent(dashboard.this, feedbackActivity.class);
+                vibrate.vibrate(100);
+                startActivity(intent);
+            }
+        });
+        contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to start the new activity
+                Intent intent = new Intent(dashboard.this, contactusActivity.class);
                 vibrate.vibrate(100);
                 startActivity(intent);
             }
