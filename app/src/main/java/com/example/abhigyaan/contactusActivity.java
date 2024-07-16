@@ -44,7 +44,7 @@ public class contactusActivity extends AppCompatActivity {
 
         // Kashyap
         setImageClickListener(R.id.whatsappkashyap, "https://wa.me/+916206671966");
-        setImageClickListener(R.id.instagramkashyap, "https://www.instagram.com/kumar_kashyap_username");
+        setImageClickListener(R.id.instagramkashyap, "https://www.instagram.com/kashyap_jod?igsh=cXczZmhjdjg2d2k3");
         setImageClickListener(R.id.linkdinkashyap, "https://www.linkedin.com/in/kumar-kashyap-0155011b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app");
 
         // Naman
@@ -54,7 +54,7 @@ public class contactusActivity extends AppCompatActivity {
 
         // Khushboo
         setImageClickListener(R.id.whatsappkhusboo, "https://wa.me/+918955539597");
-        setImageClickListener(R.id.instagramkhusboo, "https://www.instagram.com/khushboo_jain_username");
+        setImageClickListener(R.id.instagramkhusboo, "https://www.instagram.com/kashyap_jod?igsh=cXczZmhjdjg2d2k3");
         setImageClickListener(R.id.linkdinkhusboo, "https://www.linkedin.com/in/khushboojain29?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app");
     }
 

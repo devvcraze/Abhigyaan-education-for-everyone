@@ -54,6 +54,10 @@ dependencies {
     implementation(libs.firebase.storage)
     implementation(libs.firebase.firestore)
     implementation(libs.play.services.auth)
+    implementation(libs.circleimageview)
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.firebase.ui.database)
+    implementation(libs.dialogplus)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape  xmlns:andriod="http://schemas.android.com/aapt">
+    <solid andriod:color="#B4DFE4"/>
+    <stroke
+        andriod:width="1dp"
+        andriod:color="#101010"/>
+    <corners
+        andriod:radius="35dp"/>
+</shape>
