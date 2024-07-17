@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class upd_disha_batch extends AppCompatActivity {
@@ -24,10 +23,6 @@ public class upd_disha_batch extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
-
-
 
         FirebaseRecyclerOptions<MainModel_disha> options =
                 new FirebaseRecyclerOptions.Builder<MainModel_disha>()
@@ -51,9 +46,9 @@ public class upd_disha_batch extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search,menu);
-        MenuItem item=menu.findItem(R.id.search);
-        SearchView searchView=(SearchView)item.getActionView();
+        getMenuInflater().inflate(R.menu.search, menu);
+        MenuItem item = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) item.getActionView();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -69,12 +64,13 @@ public class upd_disha_batch extends AppCompatActivity {
         });
         return super.onCreateOptionsMenu(menu);
     }
-    private  void txtSearch(String str){
+
+    private void txtSearch(String str) {
         FirebaseRecyclerOptions<MainModel_disha> options =
                 new FirebaseRecyclerOptions.Builder<MainModel_disha>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("UPdations_Disha").orderByChild("name").startAt(str).endAt(str+""), MainModel_disha.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("UPdations_Disha").orderByChild("name").startAt(str).endAt(str + "\uf8ff"), MainModel_disha.class)
                         .build();
-        mainAdapterDisha=new MainAdapter_disha(options);
+        mainAdapterDisha = new MainAdapter_disha(options);
         mainAdapterDisha.startListening();
         recyclerView.setAdapter(mainAdapterDisha);
     }

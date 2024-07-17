@@ -1,107 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:background="#D9DDF4"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#208BBB"
-        android:textSize="22dp"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:text="Update here "/>
-    <TextView
+    android:layout_height="match_parent"
+    android:background="#D9DDF4">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Name"/>
+        android:background="#D9DDF4"
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="34dp"
-        android:id="@+id/textname"
-        android:hint="Enter Fullname"
-        android:layout_marginLeft="10dp"
-        android:gravity="center"
-        android:layout_marginRight="10dp"
-        android:background="@color/white"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#208BBB"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Update here " />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Class"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Name" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="34dp"
-        android:id="@+id/textclass"
-        android:hint="Enter as 'Class 10'"
-        android:layout_marginLeft="10dp"
-        android:gravity="center"
-        android:layout_marginRight="10dp"
-        android:background="@color/white"
-        tools:ignore="SpeakableTextPresentCheck" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Update here "/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="50dp"
+            app:cardCornerRadius="15dp"
+            android:handwritingBoundsOffsetLeft="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:id="@+id/textname"
+                android:hint="Enter Fullname"
+                android:gravity="center"
+                android:background="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.cardview.widget.CardView>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:id="@+id/textupdate"
-        android:layout_marginLeft="10dp"
-        android:gravity="center"
-        android:hint="Start Updating"
-        android:layout_marginRight="10dp"
-        android:background="@color/white"
-        tools:ignore="SpeakableTextPresentCheck" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text=" Image Url "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Class" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="34dp"
-        android:id="@+id/imageurl"
-        android:layout_marginLeft="10dp"
-        android:hint="Should be an Image url address"
-        android:gravity="center"
-        android:layout_marginRight="10dp"
-        android:background="@color/white"
-        tools:ignore="SpeakableTextPresentCheck" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:background="#00000000"
-        android:id="@+id/updatedone"
-        android:text="Update"
-        android:gravity="center"
-        android:textAllCaps="false"
-        android:textColor="#208BBB"
-        android:textSize="22dp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="50dp"
+            android:layout_marginHorizontal="15dp"
+            app:cardCornerRadius="15dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:id="@+id/textclass"
+                android:hint="Enter as 'Class 10'"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:text="Update(please use the next line ) " />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="100dp"
+            android:layout_marginHorizontal="15dp"
+            app:cardCornerRadius="15dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="248dp"
+                android:id="@+id/textupdate"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:hint="Start Updating"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text=" Image Url " />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="50dp"
+            android:layout_marginHorizontal="15dp"
+            app:cardCornerRadius="15dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/imageurl"
+                android:layout_marginLeft="10dp"
+                android:hint="Should be an Image url address"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:elevation="50dp"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="15dp"
+            android:background="#208BBB"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:background="#00000000"
+                android:id="@+id/updatedone"
+                android:textStyle="bold"
+                android:text="UPDATE"
+                android:textAllCaps="false"
+                android:textColor="#208BBB"
+                android:textSize="22dp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
