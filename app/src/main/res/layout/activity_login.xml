@@ -69,15 +69,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/username">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#757575"
-                android:textStyle="bold"
-                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:hint="@string/username"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_togglemain"
@@ -85,28 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:textColorHint="#757575"
-                android:textStyle="bold"
-                tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_margin="5dp"
-            android:background="#00000000"
-            android:elevation="0dp"
-            android:fontFamily="@font/belleza"
-            android:text="@string/forgot_password"
-            android:textColor="#B71C1C"
-            tools:ignore="RtlHardcoded" />
+            />
 
         <Button
             android:id="@+id/mainsubmit"
@@ -114,11 +85,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
-            android:backgroundTint="#34563E"
+            android:backgroundTint="#142CAF"
             android:elevation="0dp"
             android:fontFamily="@font/belleza"
             android:onClick="loginUser"
-            android:text="@string/submit2"
+            android:text="Google "
             android:textColor="#FFFFFF"
             tools:ignore="RtlHardcoded" />
     </LinearLayout>
@@ -128,24 +99,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="-25dp"
-        android:padding="20dp">
-
-        <Button
-            android:id="@+id/signup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="5dp"
-            android:onClick="signup"
-            android:background="#00000000"
-            android:elevation="10dp"
-            android:fontFamily="@font/belleza"
-            android:text="@string/new_user_sign_up"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            tools:ignore="VisualLintButtonSize" />
-
-    </LinearLayout>
+        android:padding="20dp"/>
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

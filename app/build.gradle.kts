@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.androidx.paging.runtime)
     implementation(libs.firebase.ui.database)
     implementation(libs.dialogplus)
+    implementation(libs.firebase.bom)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

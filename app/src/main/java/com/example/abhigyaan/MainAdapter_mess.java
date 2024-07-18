@@ -27,10 +27,10 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainAdapter_disha extends FirebaseRecyclerAdapter<MainModel_disha, MainAdapter_disha.myViewHolder> {
+public class MainAdapter_mess extends FirebaseRecyclerAdapter<MainModel_disha, MainAdapter_mess.myViewHolder> {
     private boolean toastShown = false;
 
-    public MainAdapter_disha(@NonNull FirebaseRecyclerOptions<MainModel_disha> options) {
+    public MainAdapter_mess(@NonNull FirebaseRecyclerOptions<MainModel_disha> options) {
         super(options);
     }
 
@@ -82,7 +82,9 @@ public class MainAdapter_disha extends FirebaseRecyclerAdapter<MainModel_disha, 
                                 map.put("update", update.getText().toString());
                                 map.put("surl", image.getText().toString());
 
-                                FirebaseDatabase.getInstance().getReference().child("UPdations_Disha")
+
+
+                                FirebaseDatabase.getInstance().getReference().child("UPdations_mess")
                                         .child(getRef(position).getKey()).updateChildren(map)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
@@ -98,10 +100,6 @@ public class MainAdapter_disha extends FirebaseRecyclerAdapter<MainModel_disha, 
                                                 Toast.makeText(holder.name.getContext(), "Error while updating data", Toast.LENGTH_SHORT).show();
                                             }
                                         });
-
-
-                               
-
                             }
                         });
                         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class upd_mess_batch extends AppCompatActivity {
     RecyclerView recyclerView;
-    MainAdapter_disha mainAdapterDisha;
+    MainAdapter_mess mainAdapterDisha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class upd_mess_batch extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<MainModel_disha>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("UPdations_mess"), MainModel_disha.class)
                         .build();
-        mainAdapterDisha = new MainAdapter_disha(options);
+        mainAdapterDisha = new MainAdapter_mess(options);
         recyclerView.setAdapter(mainAdapterDisha);
     }
 
@@ -70,7 +70,7 @@ public class upd_mess_batch extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<MainModel_disha>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("UPdations_mess").orderByChild("name").startAt(str).endAt(str + "\uf8ff"), MainModel_disha.class)
                         .build();
-        mainAdapterDisha = new MainAdapter_disha(options);
+        mainAdapterDisha = new MainAdapter_mess(options);
         mainAdapterDisha.startListening();
         recyclerView.setAdapter(mainAdapterDisha);
     }

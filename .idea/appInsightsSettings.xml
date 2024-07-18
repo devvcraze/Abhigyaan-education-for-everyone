@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.abhigyaan" />
+                  <option name="mobileSdkAppId" value="1:93553756518:android:e1260136f04b6703dce0a7" />
+                  <option name="projectId" value="abhigyaan-eb409" />
+                  <option name="projectNumber" value="93553756518" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

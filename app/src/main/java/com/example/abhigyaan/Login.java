@@ -4,21 +4,37 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-//import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.identity.BeginSignInRequest;
+import com.google.android.gms.auth.api.identity.Identity;
+import com.google.android.gms.auth.api.identity.SignInClient;
+import com.google.android.gms.auth.api.identity.SignInCredential;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.android.material.textfield.TextInputLayout;
-//import com.google.firebase.database.FirebaseDatabase;
 
 public class Login extends AppCompatActivity {
-//    private FirebaseAuth auth;
-//    private static final int RC_SIGN_IN = 9001;
-//    private GoogleSignInClient googleSignInClient;
+    private FirebaseAuth mAuth;
+    private SignInClient oneTapClient;
+    private BeginSignInRequest signInRequest;
+    private static final int REQ_ONE_TAP = 2;  // Can be any integer unique to the Activity.
+
     Button callSign, mainsubmit;
     ImageView imageView;
     TextView welcome, signup3;
@@ -32,172 +48,92 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        vibrate=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+        vibrate = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         // Initialize Firebase Auth
-//        auth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
-        // Find button by ID
-//        btn = findViewById(R.id.btn);
+        // Check if the user is already signed in
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            // User is already signed in, navigate to the dashboard
+            Intent intent = new Intent(Login.this, dashboard.class);
+            startActivity(intent);
+            finish();
+        }
+
+        // Initialize One Tap client
+        oneTapClient = Identity.getSignInClient(this);
+        signInRequest = BeginSignInRequest.builder()
+                .setGoogleIdTokenRequestOptions(
+                        BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
+                                .setSupported(true)
+                                .setServerClientId("93553756518-pabvpnnrglcl9lsckn0bs028t0kblpu3.apps.googleusercontent.com") // Ensure this is your server client ID
+                                .setFilterByAuthorizedAccounts(false)
+                                .build())
+                .build();
+
+        // Set up the button listener for Google sign-in
+        mainsubmit = findViewById(R.id.mainsubmit);
+        mainsubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                oneTapClient.beginSignIn(signInRequest)
+                        .addOnSuccessListener(Login.this, result -> {
+                            try {
+                                startIntentSenderForResult(result.getPendingIntent().getIntentSender(), REQ_ONE_TAP, null, 0, 0, 0);
+                            } catch (Exception e) {
+                                Log.e("Login", "Couldn't start One Tap UI: " + e.getLocalizedMessage());
+                            }
+                        })
+                        .addOnFailureListener(Login.this, e -> {
+                            Toast.makeText(Login.this, "Google Sign-In Failed: " + e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                        });
+            }
+        });
+
         newbtn = findViewById(R.id.newbtn);
-
-        // Set an OnClickListener on the button
         newbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create an Intent to start the new activity
                 Intent intent = new Intent(Login.this, dashboard.class);
                 vibrate.vibrate(100);
                 startActivity(intent);
             }
         });
     }
-}
-
-/*        auth=FirebaseDatabase.getInstance();
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.client_id))
-                .requestEmail()
-                .build();
-        googleSignInClient = GoogleSignIn.getClient(this, gso);*/
-
-
-       /*btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signin();
-
-            }
-        });*/
-/*
-        callSign = findViewById(R.id.signup);
-        usernamemain = findViewById(R.id.usernamemain);
-        password_togglemain = findViewById(R.id.password_togglemain);
-        mainsubmit=findViewById(R.id.mainsubmit);
-
-        callSign.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Login.this, SIGNUP.class);
-                startActivity(intent);
-            }
-        });
-    }*
-
-
-   /* private void signin() {
-        Intent signInIntent = googleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
 
     @Override
-    public void onActivityResult(int requestCode,int resultCode,Intent data){
-        super.onActivityResult(requestCode,resultCode,data);
-        if(requestCode==RC_SIGN_IN){
-            Task<GoogleSignInAccount> task=GoogleSignIn.getSignedInAccountFromIntent(data);
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQ_ONE_TAP) {
             try {
-                GoogleSignInAccount account=task.getResult(ApiException.class);
-                firebaseAuth(account.getIdToken());
-
-            }catch (ApiException e){
-                Toast.makeText(this, "login failed: "+e, Toast.LENGTH_SHORT).show();
-
+                SignInCredential credential = oneTapClient.getSignInCredentialFromIntent(data);
+                String idToken = credential.getGoogleIdToken();
+                if (idToken != null) {
+                    firebaseAuthWithGoogle(idToken);
+                }
+            } catch (ApiException e) {
+                Toast.makeText(this, "Sign-In Failed: " + e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         }
-    }*/
-   /* private void firebaseAuth(String idToken) {
-        AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
-        auth.signInWithCredential(credential)
+    }
+
+    private void firebaseAuthWithGoogle(String idToken) {
+        AuthCredential firebaseCredential = GoogleAuthProvider.getCredential(idToken, null);
+        mAuth.signInWithCredential(firebaseCredential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent intent = new Intent(Login.this, features.class);
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent = new Intent(Login.this, dashboard.class);
                             startActivity(intent);
+                            finish();
                         } else {
-                            Toast.makeText(Login.this, "login failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-    }*/
-
-
-    /*private Boolean validatePassword() {
-        String val = Objects.requireNonNull(password_togglemain.getEditText()).getText().toString();
-        if (val.isEmpty()) {
-            password_togglemain.setError("Field cannot be empty");
-            return false;
-        } else {
-            password_togglemain.setError(null);
-            return true;
-        }
     }
-
-    private Boolean validateUsername() {
-        String val = Objects.requireNonNull(usernamemain.getEditText()).getText().toString();
-        if (val.isEmpty()) {
-            usernamemain.setError("Field cannot be empty");
-            return false;
-        } else {
-            usernamemain.setError(null);
-            usernamemain.setErrorEnabled(false);
-            return true;
-        }
-    }
-
-    public void loginUser(View view) {
-        if (!validateUsername() || !validatePassword()) {
-            return;
-        } else {
-            isUser();
-        }
-    }*/
-/*
-
-    private void isUser() {
-
-        final String usernameentered = Objects.requireNonNull(usernamemain.getEditText()).getText().toString().trim();
-        final String passwordentered = Objects.requireNonNull(password_togglemain.getEditText()).getText().toString().trim();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUser = reference.orderByChild("username").equalTo(usernameentered);
-        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    Log.d("LoginDebug", "User found");
-                    usernamemain.setError(null);
-                    usernamemain.setErrorEnabled(false);
-                    String Passwordfromdb = snapshot.child(usernameentered).child("password").getValue(String.class);
-                    assert Passwordfromdb != null;
-                    if (Passwordfromdb.equals(passwordentered)) {
-                        usernamemain.setError(null);
-                        usernamemain.setErrorEnabled(false);
-                        String namefromdb = snapshot.child(usernameentered).child("name").getValue(String.class);
-                        String usernamefromdb = snapshot.child(usernameentered).child("username").getValue(String.class);
-                        String phonefromdb = snapshot.child(usernameentered).child("phone").getValue(String.class);
-                        String email1fromdb = snapshot.child(usernameentered).child("email").getValue(String.class);
-                        Intent intent = new Intent(getApplicationContext(), userprofile.class);
-                        intent.putExtra("name", namefromdb);
-                        intent.putExtra("username", usernamefromdb);
-                        intent.putExtra("phone", phonefromdb);
-                        intent.putExtra("email", email1fromdb);
-                        intent.putExtra("password", Passwordfromdb);
-                        startActivity(intent);
-                    } else {
-                        password_togglemain.setError("Wrong password");
-                        password_togglemain.requestFocus();
-                    }
-                } else {
-                    Log.d("LoginDebug", "User not found");
-                    usernamemain.setError("User does not exist");
-                    usernamemain.requestFocus();
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("LoginDebug", "Database error: " + error.getMessage());
-            }*/
-        /*});/*
-    }
-}*/
+}
