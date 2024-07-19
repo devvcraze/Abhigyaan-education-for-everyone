@@ -3,7 +3,9 @@ package com.example.abhigyaan;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class upd_mess_batch extends AppCompatActivity {
     RecyclerView recyclerView;
     MainAdapter_mess mainAdapterDisha;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,8 @@ public class upd_mess_batch extends AppCompatActivity {
         setContentView(R.layout.activity_upd_mess_batch);
 
         recyclerView = findViewById(R.id.rv);
+        progressBar = findViewById(R.id.progressBar);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<MainModel_disha> options =
@@ -30,6 +35,12 @@ public class upd_mess_batch extends AppCompatActivity {
                         .build();
         mainAdapterDisha = new MainAdapter_mess(options);
         recyclerView.setAdapter(mainAdapterDisha);
+
+        // Show the progress bar initially
+        progressBar.setVisibility(View.VISIBLE);
+
+        // Hide the progress bar once the data is loaded
+        recyclerView.getViewTreeObserver().addOnGlobalLayoutListener(() -> progressBar.setVisibility(View.GONE));
     }
 
     @Override

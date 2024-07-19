@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Abhigyaan</string>
     <string name="anubhav">ANUBHAV</string>
-    <string name="hello_there_welcome_back">Hello there ,Welcome Back</string>
+    <string name="hello_there_welcome_back">Hello there ,Welcome </string>
     <string name="todo">TODO</string>
     <string name="sign_in_to_continue">Sign In to continue</string>
     <string name="hello_welcome_back">Hello ,Welcome Back</string>

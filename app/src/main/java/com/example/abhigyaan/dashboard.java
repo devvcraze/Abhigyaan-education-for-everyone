@@ -5,41 +5,38 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
 import android.widget.TextView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class dashboard extends AppCompatActivity {
 
     TextView verticalsText;
     TextView events_text;
-    TextView gallery_text ;
+    TextView gallery_text;
     TextView about_text;
     TextView coordination_text;
     TextView feedback_text;
     Vibrator vibrate;
     CardView contact;
-
-
+    FloatingActionButton fabProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_try);
-        vibrate=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+        vibrate = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         // Initialize the TextView
         verticalsText = findViewById(R.id.verticals_text);
-        events_text=findViewById(R.id.events_text);
-        gallery_text=findViewById(R.id.gallery_text);
-        about_text=findViewById(R.id.about_text);
-        coordination_text=findViewById(R.id.coordination_text);
-        feedback_text=findViewById(R.id.feedback_text);
-        contact=findViewById(R.id.card_contact);
+        events_text = findViewById(R.id.events_text);
+        gallery_text = findViewById(R.id.gallery_text);
+        about_text = findViewById(R.id.about_text);
+        coordination_text = findViewById(R.id.coordination_text);
+        feedback_text = findViewById(R.id.feedback_text);
+        contact = findViewById(R.id.card_contact);
+        fabProfile = findViewById(R.id.fab_profile);
 
         // Set OnClickListener
         verticalsText.setOnClickListener(new View.OnClickListener() {
@@ -106,5 +103,13 @@ public class dashboard extends AppCompatActivity {
             }
         });
 
+        // Set OnClickListener for Floating Action Button
+        fabProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(dashboard.this, profileActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

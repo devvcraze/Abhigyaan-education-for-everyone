@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D9DDF4"
+    tools:ignore="ScrollViewCount">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:id="@+id/layout4"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#D9DDF4"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="370dp"
+
+                android:layout_height="180dp"
+                android:id="@+id/layout1"
+                android:padding="20dp"
+                android:background="@drawable/bac">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:id="@+id/profileImage"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/google"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="4dp" />
+
+                <TextView
+                    android:id="@+id/full_name_profile_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/profileImage"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/belleza"
+                    android:includeFontPadding="false"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:id="@+id/full_name_profile_label2"
+                    android:layout_below="@+id/full_name_profile_label"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toEndOf="@+id/profileImage"
+                    android:includeFontPadding="false"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/sign_out_button"
+                android:layout_width="130dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="#DA284A"
+                android:fontFamily="@font/belleza"
+                android:text="Sign Out"
+                android:textColor="#F3EAEB" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

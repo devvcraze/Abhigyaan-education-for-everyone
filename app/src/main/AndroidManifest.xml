@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Material3.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".profileActivity"
+            android:exported="false" />
+        <activity
             android:name=".contactusActivity"
             android:exported="false" />
         <activity
@@ -41,7 +44,6 @@
             android:exported="false" />
         <activity
             android:name=".upd_disha_batch"
-
             android:exported="false" />
         <activity
             android:name=".evenotedetails"

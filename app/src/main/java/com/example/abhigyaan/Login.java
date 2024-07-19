@@ -92,15 +92,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        newbtn = findViewById(R.id.newbtn);
-        newbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Login.this, dashboard.class);
-                vibrate.vibrate(100);
-                startActivity(intent);
-            }
-        });
+
     }
 
     @Override

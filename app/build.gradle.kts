@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.firebase.ui.database)
     implementation(libs.dialogplus)
     implementation(libs.firebase.bom)
+    implementation(libs.firebase.messaging)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

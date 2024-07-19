@@ -27,6 +27,7 @@ pagingRuntime = "3.3.0"
 firebaseUiDatabase = "8.0.2"
 dialogplus = "1.11"
 firebaseBom = "33.1.2"
+firebaseMessaging = "24.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -55,6 +56,7 @@ androidx-paging-runtime = { group = "androidx.paging", name = "paging-runtime", 
 firebase-ui-database = { group = "com.firebaseui", name = "firebase-ui-database", version.ref = "firebaseUiDatabase" }
 dialogplus = { group = "com.orhanobut", name = "dialogplus", version.ref = "dialogplus" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
