@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">Abhigyaan</string>
     <string name="anubhav">ANUBHAV</string>
-    <string name="hello_there_welcome_back">Hello there, Welcome</string>
+    <string name="hello_there_welcome_back">Hello there ,Welcome </string>
     <string name="todo">TODO</string>
     <string name="sign_in_to_continue">Sign In to continue</string>
-    <string name="hello_welcome_back">Hello, Welcome Back</string>
+    <string name="hello_welcome_back">Hello ,Welcome Back</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="submit">Submit</string>
-    <string name="or_sign_in_with">or sign-in with</string>
+    <string name="or_sign_in_with">      or sign-in with</string>
     <string name="google">Google</string>
     <string name="newgoogle">Google</string>
     <string name="sign_up">sign up</string>
-    <string name="or_else">or else</string>
+    <string name="or_else">or else  </string>
     <string name="sign_up2">sign up</string>
     <string name="sign_up3">sign up</string>
     <string name="welcome">Welcome!</string>
@@ -26,7 +26,7 @@
     <string name="about_abhigyaan">About Abhigyaan</string>
     <string name="feedback_page">Feedback Page</string>
     <string name="verticals">Verticals</string>
-    <string name="sign_in_via_google">SIGN IN VIA GOOGLE</string>
+    <string name="sign_in_via_google">SIGN IN VIA GOOGLE</string>">
     <string name="client_id">AIzaSyC7BA7jSjxL4WASRlLcu5QG7OZKOik4bwI</string>
     <string name="_20">20</string>
     <string name="title_activity_evening_batch">evening_batch</string>
@@ -36,6 +36,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -55,6 +56,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="button">Button</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_newhe">newhe</string>
     <string name="open">Open the drawer</string>

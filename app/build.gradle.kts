@@ -60,9 +60,6 @@ dependencies {
     implementation(libs.dialogplus)
     implementation(libs.firebase.bom)
     implementation(libs.firebase.messaging)
-    implementation(libs.coil)
-    implementation(libs.com.google.android.material.material)
-    implementation(libs.design)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
