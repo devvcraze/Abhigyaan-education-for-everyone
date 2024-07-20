@@ -1,11 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dac"
+    android:background="@color/white"
     tools:context=".aboutActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/abhigyaan_logo"/>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is Abhigyaan ? "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_display"
+            android:text="Abhigyaan, a volunteer organization based at BITS Pilani, Goa campus, is driven by a dedicated group of students committed to assisting the underprivileged. Open to all who wish to contribute, Abhigyaan has achieved significant milestones thanks to active student participation. Established in August 2005 following Prof. T.C. Goel's vision of education for all, and under the guidance of Dr. Basavadatta Mitra, the initiative began as a night school for the children of campus workers. Initially, it enrolled 34 children, but today, nearly 120 BITS students volunteer regularly, extending their efforts to local slums like Lamani."
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+           android:backgroundTint="#DDD1C0"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/instagramImageView"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/instagram"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="openInstagram"/>
+                <ImageView
+                    android:id="@+id/linkedinImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/linkdin"
+                    android:layout_height="wrap_content"
+                    android:onClick="openLinkedIn"/>
+                <ImageView
+                    android:id="@+id/facebookImageView"
+                    android:layout_width="47dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/facebook"
+                    android:onClick="openFacebook"/>
+                <ImageView
+                    android:id="@+id/chromeImageView"
+                    android:layout_width="47dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/chrome"
+                    android:onClick="openWebsite"/>
+                <ImageView
+                    android:id="@+id/linktreeImageView"
+                    android:layout_width="47dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/linktree"
+                    android:onClick="openlinktree"/>
+                <ImageView
+                    android:id="@+id/youtubeImageView"
+                    android:layout_width="47dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/youtube"
+
+                    android:onClick="openyoutube"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/missionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:textStyle="bold"
+            android:text="Our Mission"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/missionContentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_display"
+            android:text="Abhigyaan's mission is to provide education and support to the underprivileged, embodying the goal of education for all. The organization conducts educational programs in the evenings and at night for both children and campus workers, ensuring that everyone has access to learning opportunities. Abhigyaan is committed to making a positive impact on the lives of those it serves, continually striving to expand its reach and effectiveness."
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/missionImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/abhigyaan"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/activitiesTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Our Activities"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/activitiesContentTextView"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/playfair_display"
+            android:layout_height="wrap_content"
+            android:text="Abhigyaan engages in a variety of activities to support its mission. Members regularly visit local slums like Lamani to teach and play with the children. The organization also celebrates events such as Children's Day and Republic Day with the underprivileged, fostering a sense of community and joy. Additionally, volunteers have had opportunities to teach dance and participate in cultural festivities, such as Waves'19, the annual cultural fest of the college. Abhigyaan also runs campus drives like No Food Wastage Day to promote sustainability among students."
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/activitiesImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/anubhav5"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/teamTextView"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Our Team"
+            android:textSize="23dp"
+            />
+
+        <TextView
+            android:id="@+id/teamContentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/playfair_display"
+            android:text="The team at Abhigyaan comprises coordinators, batch heads, core members, and crew members who collaboratively drive the organization's mission. Coordinators oversee the overall functioning and ensure that all activities are in alignment with Abhigyaan's goals. Batch heads manage specific groups of volunteers, providing direction and support. Core members play a crucial role in planning and executing key initiatives. Crew members, the backbone of the organization, actively participate in day-to-day activities and events. This dedicated team works tirelessly to provide education and support to the underprivileged, transforming Abhigyaan into a thriving volunteer organization with a significant community impact."
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/teamImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/anubhav3"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/contactTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/contactContentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#3D51BF"
+            android:text="Go to the contacts section ->"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/contactTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Give Us Feedback"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/contactContentTextView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF1744"
+            android:text="Go to the feedback section ->"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+
+    </LinearLayout>
+</ScrollView>
