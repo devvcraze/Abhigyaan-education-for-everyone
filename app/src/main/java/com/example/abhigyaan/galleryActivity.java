@@ -2,23 +2,36 @@ package com.example.abhigyaan;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class galleryActivity extends AppCompatActivity {
+
+    private RecyclerView carouselRecyclerView;
+    private ImageSliderAdapter imageSliderAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_gallery);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+
+
+        List<Integer> imageList = Arrays.asList(
+                R.drawable.google,
+                R.drawable.google,
+                R.drawable.google,
+                R.drawable.google
+        );
+
+        imageSliderAdapter = new ImageSliderAdapter(this, imageList);
+
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+
     }
 }

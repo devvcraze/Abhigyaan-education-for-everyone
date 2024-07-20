@@ -10,16 +10,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#D9DDF4"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
-
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#208BBB"
-            android:textSize="22dp"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:text="Update here " />
+            app:cardMaxElevation="20dp"
+            android:elevation="50dp"
+            app:cardCornerRadius="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#208BBB"
+                android:textSize="22dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Update here " />
+
+        </androidx.cardview.widget.CardView>
+
+
 
         <TextView
             android:layout_width="match_parent"
@@ -139,6 +149,7 @@
             app:cardCornerRadius="15dp"
             android:background="#208BBB"
             android:layout_marginTop="12dp"
+            android:layout_marginBottom="40dp"
             android:layout_height="wrap_content">
             <Button
                 android:layout_width="match_parent"
@@ -149,10 +160,13 @@
                 android:id="@+id/updatedone"
                 android:textStyle="bold"
                 android:text="UPDATE"
+
                 android:textAllCaps="false"
                 android:textColor="#208BBB"
                 android:textSize="22dp" />
         </androidx.cardview.widget.CardView>
+
+
 
     </LinearLayout>
 </ScrollView>
