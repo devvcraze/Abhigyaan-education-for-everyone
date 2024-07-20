@@ -9,8 +9,8 @@
     <RelativeLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bac"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
         tools:context=".EveningBatchActivity">
 
         <TextView
@@ -20,7 +20,7 @@
 
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:fontFamily="cursive"
+            android:fontFamily="@font/alike_angular"
             android:text="EVENING BATCH"
             android:textColor="#F6E0E0"
             android:textSize="40dp"

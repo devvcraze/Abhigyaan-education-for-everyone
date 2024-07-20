@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D9DDF4"
+    android:background="@drawable/background_gradient"
     tools:ignore="ScrollViewCount">
 
     <LinearLayout
@@ -13,7 +13,7 @@
         android:id="@+id/layout4"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="#D9DDF4"
+
         android:layout_gravity="center_horizontal"
         android:orientation="vertical">
 

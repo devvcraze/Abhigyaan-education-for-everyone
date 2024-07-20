@@ -13,8 +13,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bac"
+        android:background="@drawable/background_gradient"
         android:fillViewport="true">
+
 
         <!-- Linear layout for vertical stacking -->
         <LinearLayout
@@ -22,6 +23,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coordinators"
+                android:textColor="@color/white"
+                android:textSize="38dp"
+                android:fontFamily="@font/alike_angular"
+                android:layout_gravity="center_horizontal"/>
 
             <!-- CardView 1 -->
             <androidx.cardview.widget.CardView

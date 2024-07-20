@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bac"
+    android:background="@drawable/background_gradient"
     tools:context=".EnglishBatchActivity">
 
     <ScrollView
@@ -14,7 +14,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="15dp">
 
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:fontFamily="cursive"
+                android:fontFamily="@font/alike_angular"
                 android:textColor="#F6E0E0"
                 android:text="ENGLISH BATCH"
                 android:textSize="40dp"
