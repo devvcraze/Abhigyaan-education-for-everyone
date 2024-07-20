@@ -40,16 +40,18 @@
             android:textSize="16sp"
             android:layout_marginTop="16dp"/>
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
            android:backgroundTint="#DDD1C0"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/instagramImageView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:src="@drawable/instagram"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="5dp"
@@ -59,13 +61,14 @@
                     android:id="@+id/linkedinImageView"
                     android:layout_width="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="13dp"
                     android:src="@drawable/linkdin"
                     android:layout_height="wrap_content"
                     android:onClick="openLinkedIn"/>
                 <ImageView
                     android:id="@+id/facebookImageView"
                     android:layout_width="47dp"
+                    android:layout_marginLeft="13dp"
                     android:layout_marginRight="10dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/facebook"
@@ -73,28 +76,61 @@
                 <ImageView
                     android:id="@+id/chromeImageView"
                     android:layout_width="47dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="13dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/chrome"
                     android:onClick="openWebsite"/>
                 <ImageView
                     android:id="@+id/linktreeImageView"
                     android:layout_width="47dp"
+                    android:layout_marginRight="4dp"
                     android:layout_marginLeft="15dp"
                     android:layout_height="match_parent"
                     android:src="@drawable/linktree"
                     android:onClick="openlinktree"/>
-                <ImageView
-                    android:id="@+id/youtubeImageView"
-                    android:layout_width="47dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/youtube"
 
-                    android:onClick="openyoutube"/>
             </LinearLayout>
 
+
+
         </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:text="Abhigyaan on Youtube also"/>
+            <ImageView
+                android:id="@+id/youtubeImageView"
+                android:layout_width="47dp"
+                android:layout_marginLeft="8dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/youtube"
+
+                android:onClick="openyoutube"/>
+
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/missionImageVie2w"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/youtubeabhi"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
 
 
         <View
