@@ -45,13 +45,12 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
            android:backgroundTint="#EDEEF4"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:layout_height="60dp">
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center_vertical"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/instagramImageView"
