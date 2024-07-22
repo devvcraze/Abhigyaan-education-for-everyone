@@ -42,15 +42,17 @@
             android:text="Abhigyaan, a volunteer organization based at BITS Pilani, Goa campus, is driven by a dedicated group of students committed to assisting the underprivileged. Open to all who wish to contribute, Abhigyaan has achieved significant milestones thanks to active student participation. Established in August 2005 following Prof. T.C. Goel's vision of education for all, and under the guidance of Dr. Basavadatta Mitra, the initiative began as a night school for the children of campus workers. Initially, it enrolled 34 children, but today, nearly 120 BITS students volunteer regularly, extending their efforts to local slums like Lamani."
             android:textSize="16sp"
             android:layout_marginTop="16dp"/>
+
         <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
            android:backgroundTint="#EDEEF4"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:layout_height="wrap_content">
+            android:layout_height="60dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/instagramImageView"
@@ -97,6 +99,12 @@
 
 
         </com.google.android.material.card.MaterialCardView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -134,17 +142,12 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
+            android:background="@color/black"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"/>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"/>
+
 
         <TextView
             android:id="@+id/missionTextView"
@@ -177,7 +180,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
+            android:background="@color/black"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"/>
 
@@ -211,7 +214,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
+            android:background="@color/black"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"/>
 
@@ -246,7 +249,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
+            android:background="@color/black"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"/>
 

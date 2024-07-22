@@ -28,6 +28,8 @@ firebaseUiDatabase = "8.0.2"
 dialogplus = "1.11"
 firebaseBom = "33.1.2"
 firebaseMessaging = "24.0.0"
+viewpager2 = "1.1.0"
+coreKtx = "1.15.0-alpha01"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -57,6 +59,8 @@ firebase-ui-database = { group = "com.firebaseui", name = "firebase-ui-database"
 dialogplus = { group = "com.orhanobut", name = "dialogplus", version.ref = "dialogplus" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
