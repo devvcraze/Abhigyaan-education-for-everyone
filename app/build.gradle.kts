@@ -60,6 +60,8 @@ dependencies {
     implementation(libs.dialogplus)
     implementation(libs.firebase.bom)
     implementation(libs.firebase.messaging)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.recyclerview)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
