@@ -16,6 +16,12 @@
         android:theme="@style/Theme.Material3.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".PastEventsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpcomingEventsActivity"
+            android:exported="false" />
+        <activity
             android:name=".PastActivity"
             android:exported="false" />
         <activity
