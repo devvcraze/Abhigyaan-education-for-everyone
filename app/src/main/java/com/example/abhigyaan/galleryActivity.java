@@ -1,61 +1,42 @@
 package com.example.abhigyaan;
 
 import android.os.Bundle;
-import android.util.Log;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class galleryActivity extends AppCompatActivity {
 
-    private static final String TAG = "galleryActivity";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_gallery);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         RecyclerView recyclerView = findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         List<ImageModel> imageList = new ArrayList<>();
+        imageList.add(new ImageModel("https://drive.google.com/uc?export=view&id=1_xe0CvkWmoE2iOx3PtjW-XaErlUZSlXv"));
+        imageList.add(new ImageModel("https://drive.google.com/uc?export=view&id=1mRRrXgExJG52_xarIQbRjyZTg0wdEJGZ"));
+        imageList.add(new ImageModel("image1")); // Testing with another source
+
+        // Add more image URLs
+
         ImageAdapter imageAdapter = new ImageAdapter(imageList);
         recyclerView.setAdapter(imageAdapter);
-
-        // Fetch images from Firebase
-        fetchImagesFromFirebase(imageList, imageAdapter);
-    }
-
-    private void fetchImagesFromFirebase(List<ImageModel> imageList, ImageAdapter imageAdapter) {
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("images");
-
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                imageList.clear(); // Clear the list to avoid duplicates
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    String imageUrl = snapshot.getValue(String.class);
-                    imageList.add(new ImageModel(imageUrl));
-                }
-                imageAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.e(TAG, "Failed to read image URLs from Firebase Database", databaseError.toException());
-            }
-        });
     }
 }
