@@ -61,6 +61,8 @@ dependencies {
     implementation(libs.firebase.bom)
     implementation(libs.firebase.messaging)
     implementation(libs.androidx.viewpager2)
+    implementation(libs.androidx.fragment)
+    implementation(libs.core.ktx)
 
 
     testImplementation(libs.junit)
