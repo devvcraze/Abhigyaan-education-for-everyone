@@ -17,6 +17,7 @@
             android:layout_width="150dp"
             android:layout_gravity="center_horizontal"
             android:layout_height="150dp"
+            android:layout_marginTop="15dp"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:src="@drawable/abhigyaan_logo"

@@ -1,4 +1,3 @@
-// ImageAdapter.java
 package com.example.abhigyaan;
 
 import android.view.LayoutInflater;

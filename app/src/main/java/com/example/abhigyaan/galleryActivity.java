@@ -1,4 +1,3 @@
-// galleryActivity.java
 package com.example.abhigyaan;
 
 import android.os.Bundle;
@@ -31,9 +30,10 @@ public class galleryActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         List<ImageModel> imageList = new ArrayList<>();
-        imageList.add(new ImageModel("https://example.com/image1.jpg"));
-        imageList.add(new ImageModel("https://example.com/image2.jpg"));
-        imageList.add(new ImageModel("https://example.com/image3.jpg"));
+        imageList.add(new ImageModel("https://drive.google.com/uc?export=view&id=1_xe0CvkWmoE2iOx3PtjW-XaErlUZSlXv"));
+        imageList.add(new ImageModel("https://drive.google.com/uc?export=view&id=1mRRrXgExJG52_xarIQbRjyZTg0wdEJGZ"));
+        imageList.add(new ImageModel("image1")); // Testing with another source
+
         // Add more image URLs
 
         ImageAdapter imageAdapter = new ImageAdapter(imageList);

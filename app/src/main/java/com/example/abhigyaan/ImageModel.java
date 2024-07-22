@@ -1,4 +1,3 @@
-// ImageModel.java
 package com.example.abhigyaan;
 
 public class ImageModel {
