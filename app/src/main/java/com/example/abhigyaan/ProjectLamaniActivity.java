@@ -28,6 +28,11 @@ public class ProjectLamaniActivity extends AppCompatActivity {
         gal=findViewById(R.id.gal_lamani);
         mem=findViewById(R.id.mem_lamani);
         upd=findViewById(R.id.upd_lamani);
+        sub.setOnClickListener(view -> {
+            Intent intent = new Intent(ProjectLamaniActivity.this,  sub_lamani_batch.class);
+            vibrate.vibrate(100);
+            startActivity(intent);
+        });
         mat.setOnClickListener(view -> {
             Intent intent = new Intent(ProjectLamaniActivity.this,  mat_lamani_batch.class);
             vibrate.vibrate(100);

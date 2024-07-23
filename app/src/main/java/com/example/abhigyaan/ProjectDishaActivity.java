@@ -27,6 +27,11 @@ public class ProjectDishaActivity extends AppCompatActivity {
         mem=findViewById(R.id.mem_disha);
         upd=findViewById(R.id.upd_disha);
         vibrate=(Vibrator)getSystemService(VIBRATOR_SERVICE);
+        sub.setOnClickListener(view -> {
+            Intent intent = new Intent(ProjectDishaActivity.this,  sub_disha_batch.class);
+            vibrate.vibrate(100);
+            startActivity(intent);
+        });
         mat.setOnClickListener(view -> {
             Intent intent = new Intent(ProjectDishaActivity.this,  mat_disha_batch.class);
             vibrate.vibrate(100);
