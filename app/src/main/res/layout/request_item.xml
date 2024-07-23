@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        app:cardCornerRadius="4dp"
+        app:cardCornerRadius="15dp"
         android:elevation="5dp"
         >
         <LinearLayout
@@ -28,7 +28,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/black"
+                android:layout_marginHorizontal="10dp"
+                android:background="#5B524949"
 
                 />
 
@@ -41,7 +42,9 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/black"
+                android:background="#5B524949"
+                android:layout_marginHorizontal="10dp"
+
 
                 />
 
@@ -54,7 +57,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/black"
+                android:layout_marginHorizontal="10dp"
+                android:background="#5B524949"
 
                 />
 
@@ -67,7 +71,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/black"
+                android:layout_marginHorizontal="10dp"
+                android:background="#5B524949"
 
                 />
 
@@ -84,7 +89,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:textColor="#3CA68B"
+                android:textColor="#4A9908"
+                android:layout_marginTop="-10dp"
                 android:text="Accepted by: [Name]"
                 android:visibility="gone" />
 
