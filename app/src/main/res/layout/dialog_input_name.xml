@@ -2,15 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp">
-
-    <EditText
-        android:id="@+id/editName"
+    android:padding="14dp">
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Your Name"
-        android:textSize="16sp"
-        android:padding="8dp" />
+
+        app:cardCornerRadius="4dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:background="#D9DDF4"
+
+            android:layout_height="40dp"
+            android:hint="Enter your name" />
+
+    </androidx.cardview.widget.CardView>
+
 
 </LinearLayout>

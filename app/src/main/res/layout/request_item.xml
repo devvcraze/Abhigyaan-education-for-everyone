@@ -4,102 +4,91 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_marginTop="10dp"
-    android:paddingHorizontal="8dp">
+    android:padding="16dp">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_gradient"
-        app:cardCornerRadius="3dp"
-        >
 
+        app:cardCornerRadius="4dp"
+        android:elevation="5dp"
+        >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
 
+            android:background="#D9DDF4"
+            android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/nameTextView"
-                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
+                android:text="Name" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
+                android:background="@color/black"
 
-                android:background="@color/black" />
+                />
 
             <TextView
                 android:id="@+id/whatsappNumberTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:textSize="16sp" />
-
+                android:text="WhatsApp Number" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
+                android:background="@color/black"
 
-                android:background="@color/black" />
+                />
 
             <TextView
                 android:id="@+id/dateTimeTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:textSize="16sp" />
-
+                android:text="Date and Time" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
+                android:background="@color/black"
 
-                android:background="@color/black" />
+                />
 
             <TextView
                 android:id="@+id/reasonTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:textSize="16sp" />
-
+                android:text="Reason" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="16dp"
+                android:background="@color/black"
 
-                android:background="@color/black" />
-
-
-
+                />
 
             <CheckBox
-                android:id="@+id/acceptCheckBox"
+                android:id="@+id/acceptedCheckBox"
                 android:layout_width="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="Accept Request" />
+                android:text="Accepted" />
+
+
             <TextView
                 android:id="@+id/acceptedByTextView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="-5dp"
-                android:textColor="@android:color/holo_green_dark"
-                android:textSize="14sp" />
-
-
+                android:layout_marginHorizontal="10dp"
+                android:textColor="#3CA68B"
+                android:text="Accepted by: [Name]"
+                android:visibility="gone" />
 
         </LinearLayout>
-
-
     </androidx.cardview.widget.CardView>
 
 
