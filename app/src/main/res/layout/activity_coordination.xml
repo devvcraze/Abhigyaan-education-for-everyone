@@ -250,7 +250,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD  DISHA"
+                        android:text="PH-DISHA"
                        android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -293,7 +293,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD LAMANI"
+                        android:text="PH-LAMANI"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -510,7 +510,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD DISHA"
+                        android:text="PH-DISHA"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -553,7 +553,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD LAMANI"
+                        android:text="PH-LAMANI"
                         android:textSize="20dp"
                         android:fontFamily="@font/belgrano"
                         android:textAlignment="center" />
@@ -682,7 +682,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EVENTS        AND MEDIA HEAD"
+                        android:text="EVENTS $ MEDIA HEAD"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -725,7 +725,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EVENTS        AND PR HEAD"
+                        android:text="EVENTS $ PR HEAD"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -768,7 +768,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD LAMANI"
+                        android:text="PH-LAMANI"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -811,7 +811,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD DISHA"
+                        android:text="PH-DISHA"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -940,7 +940,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="EVENTS  AND  PR HEAD"
+                        android:text="EVENTS $ PR HEAD"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -983,7 +983,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD LAMANI"
+                        android:text="PH-LAMANI"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -1026,7 +1026,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD LAMANI"
+                        android:text="PH-LAMANI"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
@@ -1069,7 +1069,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PROJECT HEAD DISHA"
+                        android:text="PH-DISHA"
                         android:fontFamily="@font/belgrano"
                         android:textSize="20dp"
                         android:textAlignment="center" />
