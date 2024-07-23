@@ -45,8 +45,10 @@ public class eventsActivity extends AppCompatActivity {
         List<OnboardingItem> onboardingItems = new ArrayList<>();
         onboardingItems.add(new OnboardingItem(R.drawable.independece, "Title 1", "Description 1"));
         onboardingItems.add(new OnboardingItem(R.drawable.children, "Title 2", "Description 2"));
-        onboardingItems.add(new OnboardingItem(R.drawable.image3, "Title 3", "Description 3"));
-        onboardingItems.add(new OnboardingItem(R.drawable.image4, "Title 4", "Description 4"));
+        onboardingItems.add(new OnboardingItem(R.drawable.work, "Title 3", "Description 3"));
+        onboardingItems.add(new OnboardingItem(R.drawable.donate, "Title 4", "Description 4"));
+        onboardingItems.add(new OnboardingItem(R.drawable.envi1, "Title 5", "Description 5"));
+        onboardingItems.add(new OnboardingItem(R.drawable.envi2, "Title 6", "Description 6"));
 
         OnboardingAdapter onboardingAdapter = new OnboardingAdapter(onboardingItems);
         viewPager.setAdapter(onboardingAdapter);
