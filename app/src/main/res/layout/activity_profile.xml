@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,6 +13,7 @@
         android:id="@+id/layout4"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+
         android:layout_gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -24,6 +26,7 @@
 
             <RelativeLayout
                 android:layout_width="370dp"
+
                 android:layout_height="180dp"
                 android:id="@+id/layout1"
                 android:padding="20dp"
@@ -65,21 +68,9 @@
                     android:includeFontPadding="false"
                     android:textSize="15sp" />
 
-                <TextView
-                    android:id="@+id/num_classes_taken"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/belleza"
-                    android:textColor="@color/white"
-                    android:layout_below="@+id/full_name_profile_label2"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_toEndOf="@+id/profileImage"
-                    android:includeFontPadding="false"
-                    android:textSize="15sp"
-                    android:text="Classes Taken: 0" />
 
             </RelativeLayout>
+
 
         </androidx.cardview.widget.CardView>
         <LinearLayout
