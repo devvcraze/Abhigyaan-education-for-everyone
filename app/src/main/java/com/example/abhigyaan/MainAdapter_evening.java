@@ -27,7 +27,7 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MainAdapter_evening extends FirebaseRecyclerAdapter<MainModel_disha, MainAdapter_evening.myViewHolder> {
+public abstract class MainAdapter_evening extends FirebaseRecyclerAdapter<MainModel_disha, MainAdapter_evening.myViewHolder> {
     private boolean toastShown = false;
 
     public MainAdapter_evening(@NonNull FirebaseRecyclerOptions<MainModel_disha> options) {
@@ -121,6 +121,10 @@ public class MainAdapter_evening extends FirebaseRecyclerAdapter<MainModel_disha
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_item, parent, false);
         return new myViewHolder(view);
     }
+
+    public abstract void onUpdateAction();
+
+    public abstract void onUpdateAction(String key);
 
     static class myViewHolder extends RecyclerView.ViewHolder {
 
