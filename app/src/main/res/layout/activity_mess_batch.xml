@@ -53,9 +53,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:src="@drawable/vol" />
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/volunteer12" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -86,9 +86,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:src="@drawable/update2" />
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/updated" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -119,9 +119,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:src="@drawable/book" />
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/stackofbooks" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -152,9 +152,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:src="@drawable/subs" />
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
+                        android:src="@drawable/change" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -186,7 +186,7 @@
                     <ImageView
                         android:layout_width="140dp"
                         android:layout_height="140dp"
-                        android:src="@drawable/team" />
+                        android:src="@drawable/team5" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -217,9 +217,9 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="140dp"
-                        android:layout_height="140dp"
-                        android:src="@drawable/gal" />
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/picture" />
 
                     <TextView
                         android:layout_width="wrap_content"
