@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -21,6 +22,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +34,8 @@ public class mem_english_batch extends AppCompatActivity {
     private ItemAdapter itemAdapter;
     private List<Item> itemList;
     private DatabaseReference databaseReference;
+    private FirebaseAuth firebaseAuth;
+    private List<String> allowedEmails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +56,37 @@ public class mem_english_batch extends AppCompatActivity {
         recyclerView.setAdapter(itemAdapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("itemseng");
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        allowedEmails = new ArrayList<>();
+        allowedEmails.add("hawentidevi@gmail.com");
+        allowedEmails.add("f20220929@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20221553@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20221142@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20221379@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20221450@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20230939@goa.bits-pilani.ac.in");
+        // Add the other allowed emails...
 
         findViewById(R.id.addButton).setOnClickListener(v -> {
-            showAddItemDialog();
+            if (isUserAllowedToAdd()) {
+                showAddItemDialog();
+            } else {
+                // Show an error message or a toast
+                Toast.makeText(this, " Sorry! You are not allowed to add members here", Toast.LENGTH_SHORT).show();
+            }
         });
 
         loadItemsFromFirebase();
+    }
+
+    private boolean isUserAllowedToAdd() {
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if (user != null) {
+            String email = user.getEmail();
+            return allowedEmails.contains(email);
+        }
+        return false;
     }
 
     private void showAddItemDialog() {
