@@ -41,6 +41,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/anubhav3" />
+                    <ImageView
+                        android:id="@+id/imageViw7"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cordi" />
 
                     <ImageView
                         android:id="@+id/imageView5"

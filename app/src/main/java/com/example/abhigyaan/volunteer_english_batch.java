@@ -18,15 +18,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class volunteer_english_batch extends AppCompatActivity {
-    TextView volunteer1, volunteer2, volunteer3, volunteer4, volunteer5, volunteer6, volunteer7, volunteer8, volunteer9, volunteer10,day;
+    TextView volunteer1, volunteer2, volunteer3, volunteer4, volunteer5, volunteer6, volunteer7, volunteer8, volunteer9, volunteer10, day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_volunteer_english_batch);
-        day=findViewById(R.id.day);
+        day = findViewById(R.id.day);
         volunteer1 = findViewById(R.id.member1);
         volunteer2 = findViewById(R.id.member2);
         volunteer3 = findViewById(R.id.member3);
@@ -37,12 +41,19 @@ public class volunteer_english_batch extends AppCompatActivity {
         volunteer8 = findViewById(R.id.member8);
         volunteer9 = findViewById(R.id.member9);
         volunteer10 = findViewById(R.id.member10);
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("ENGLISH BATCH");
-        myRef.addValueEventListener(new ValueEventListener() {
+
+        // Get the current day of the week
+        String currentDay = new SimpleDateFormat("EEEE", Locale.ENGLISH).format(Calendar.getInstance().getTime());
+
+        // Update the day TextView
+        day.setText(currentDay);
+
+        myRef.child(currentDay).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                day.setText(dataSnapshot.child("day").getValue(String.class));
                 volunteer1.setText(dataSnapshot.child("Volunteer1").getValue(String.class));
                 volunteer2.setText(dataSnapshot.child("Volunteer2").getValue(String.class));
                 volunteer3.setText(dataSnapshot.child("Volunteer3").getValue(String.class));
@@ -53,7 +64,6 @@ public class volunteer_english_batch extends AppCompatActivity {
                 volunteer8.setText(dataSnapshot.child("Volunteer8").getValue(String.class));
                 volunteer9.setText(dataSnapshot.child("Volunteer9").getValue(String.class));
                 volunteer10.setText(dataSnapshot.child("Volunteer10").getValue(String.class));
-
             }
 
             @Override
@@ -61,17 +71,17 @@ public class volunteer_english_batch extends AppCompatActivity {
                 // Handle possible errors
             }
         });
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         VideoView videoView = findViewById(R.id.videoView);
         Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.back);
         videoView.setVideoURI(videoUri);
         videoView.start();
-        videoView.setOnPreparedListener(mediaPlayer -> {
-            mediaPlayer.setLooping(true); // Loop the video
-        });
+        videoView.setOnPreparedListener(mediaPlayer -> mediaPlayer.setLooping(true)); // Loop the video
     }
 }
