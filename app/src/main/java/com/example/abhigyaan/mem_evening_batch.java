@@ -60,7 +60,12 @@ public class mem_evening_batch extends AppCompatActivity {
 
         allowedEmails = new ArrayList<>();
         allowedEmails.add("hawentidevi@gmail.com");
-        allowedEmails.add("email2@example.com");
+        allowedEmails.add("f20220929@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20221553@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20221142@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20221379@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20221450@goa.bits-pilani.ac.in");
+        allowedEmails.add("f20230939@goa.bits-pilani.ac.in");
         // Add the other allowed emails...
 
         findViewById(R.id.addButton).setOnClickListener(v -> {
