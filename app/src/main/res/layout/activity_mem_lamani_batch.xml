@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
 
-            android:text="Project Head and Leaders"
+            android:text="Project Head and Leads"
             android:layout_gravity="center_horizontal"
             android:textColor="@android:color/black"
             android:padding="8dp" />
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:text="Project Leader 1"
+            android:text="Project Lead 1"
             android:textColor="@android:color/black"
             android:padding="8dp" />
 
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:text="Project Leader 2"
+            android:text="Project Lead 2"
             android:textColor="@android:color/black"
             android:padding="8dp" />
 
@@ -115,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Project Leader 3"
+            android:text="Project Lead 3"
             android:textColor="@android:color/black"
             android:textStyle="bold"
 
@@ -127,7 +127,7 @@
             android:textStyle="bold"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Project Leader 4"
+            android:text="Project Lead 4"
             android:textColor="@android:color/black"
             android:padding="8dp" />
         <View
@@ -176,7 +176,7 @@
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#322A2A"
+        android:backgroundTint="#CE3B3535"
         android:text="Add Core/Crew"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
