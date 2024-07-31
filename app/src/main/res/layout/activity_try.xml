@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
+    android:background="#CED6DA"
     tools:context=".dashboard">
 
     <ScrollView
@@ -107,19 +107,19 @@
                 android:elevation="8dp"
                 android:onClick="onCardClick"
                 android:layout_marginTop="-30dp"
-                android:padding="16dp"
+                android:padding="25dp"
                 app:cardCornerRadius="16dp">
 
                 <TextView
                     android:id="@+id/verticals_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="#DBD0D0"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:text="Verticals"
                     android:fontFamily="@font/belgrano"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
@@ -132,7 +132,7 @@
                 android:layout_marginBottom="8dp"
                 android:elevation="8dp"
                 android:onClick="onCardClick"
-                android:padding="16dp"
+                android:padding="25dp"
                 app:cardCornerRadius="16dp">
 
                 <TextView
@@ -140,11 +140,11 @@
                     android:id="@+id/events_text"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/belgrano"
-                    android:background="@drawable/vac"
+                    android:background="#DBD0D0"
                     android:gravity="center"
                     android:text="Events"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
@@ -157,19 +157,19 @@
                 android:elevation="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:onClick="onCardClick"
-                android:padding="16dp"
+                android:padding="25dp"
                 app:cardCornerRadius="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/gallery_text"
-                    android:background="@drawable/vac"
+                    android:background="#DBD0D0"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:text="Gallery"
                     android:fontFamily="@font/belgrano"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
@@ -182,19 +182,19 @@
                 android:layout_marginHorizontal="8dp"
                 android:elevation="8dp"
                 android:onClick="onCardClick"
-                android:padding="16dp"
+                android:padding="25dp"
                 app:cardCornerRadius="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="#DBD0D0"
                     android:gravity="center"
                     android:id="@+id/about_text"
                     android:textStyle="bold"
                     android:fontFamily="@font/belgrano"
                     android:text="About Abhigyaan"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
@@ -203,23 +203,24 @@
                 android:id="@+id/card_coordination"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+
                 android:layout_marginBottom="8dp"
                 android:elevation="8dp"
                 android:onClick="onCardClick"
                 android:layout_marginHorizontal="8dp"
-                android:padding="16dp"
+                android:padding="25dp"
                 app:cardCornerRadius="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="#DBD0D0"
                     android:gravity="center"
                     android:id="@+id/coordination_text"
                     android:fontFamily="@font/belgrano"
                     android:textStyle="bold"
                     android:text="Coordinating Committee"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
@@ -238,13 +239,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="#DBD0D0"
                     android:gravity="center"
                     android:textStyle="bold"
                     android:fontFamily="@font/belgrano"
                     android:text="Feedback Page"
                     android:id="@+id/feedback_text"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
@@ -263,12 +264,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="#DBD0D0"
                     android:gravity="center"
                     android:fontFamily="@font/belgrano"
                     android:text="Contact Us"
                     android:textStyle="bold"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
