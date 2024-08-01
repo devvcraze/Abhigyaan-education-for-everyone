@@ -79,7 +79,7 @@ public class vol_mess_batch extends AppCompatActivity {
         });
 
         VideoView videoView = findViewById(R.id.videoView);
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.back);
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.back3);
         videoView.setVideoURI(videoUri);
         videoView.start();
         videoView.setOnPreparedListener(mediaPlayer -> mediaPlayer.setLooping(true)); // Loop the video

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-15dp"
             android:orientation="vertical"
-            android:background="#00000000"
+            android:background="@android:color/transparent"
             tools:context=".vol_disha_batch">
 
             <androidx.cardview.widget.CardView
@@ -33,21 +32,21 @@
                 android:layout_height="75dp"
                 android:layout_marginHorizontal="8dp"
                 android:elevation="8dp"
-                android:background="#00000000"
                 android:layout_marginTop="50dp"
                 android:layout_gravity="center_horizontal"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textStyle="bold"
                     android:gravity="center"
-                    android:background="#00000000"
                     android:text="Today's Volunteers"
                     android:fontFamily="@font/belgrano"
-                    android:textColor="@color/black"
-                    android:textSize="35sp" />
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:background="@android:color/transparent"/> <!-- Transparent background -->
 
             </androidx.cardview.widget.CardView>
 
@@ -57,9 +56,9 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="8dp"
                 android:elevation="8dp"
-                android:background="#00000000"
                 android:layout_gravity="center_horizontal"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
@@ -69,9 +68,10 @@
                     android:text="DAY"
                     android:id="@+id/day"
                     android:fontFamily="@font/belgrano"
-                    android:background="#00000000"
-                    android:textColor="@color/black"
-                    android:textSize="35sp" />
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/white"
+                    android:textSize="35sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
@@ -84,19 +84,21 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:id="@+id/member1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
-                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+
                     android:gravity="center"
                     android:text="Volunteer 1"
                     android:fontFamily="@font/belgrano"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
@@ -109,19 +111,21 @@
                 android:elevation="8dp"
                 android:layout_gravity="center_horizontal"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:id="@+id/member2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
-                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+
                     android:gravity="center"
                     android:text="Volunteer 2"
                     android:fontFamily="@font/belgrano"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
@@ -134,19 +138,21 @@
                 android:elevation="8dp"
                 android:layout_gravity="center"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:id="@+id/member3"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/belgrano"
-                    android:background="@drawable/vac"
+                    android:background="@android:color/transparent"
                     android:gravity="center"
                     android:text="Volunteer 3"
-                    android:textStyle="bold"
+
                     android:textColor="@color/white"
                     android:textSize="20sp" />
+                <!-- Transparent background -->
 
             </androidx.cardview.widget.CardView>
 
@@ -159,19 +165,21 @@
                 android:elevation="8dp"
                 android:layout_marginHorizontal="8dp"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/member4"
-                    android:background="@drawable/vac"
+                    android:background="@android:color/transparent"
                     android:gravity="center"
-                    android:textStyle="bold"
-                    android:text="Volunteer 4"
+
                     android:fontFamily="@font/belgrano"
+                    android:text="Volunteer 4"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
@@ -184,19 +192,21 @@
                 android:layout_marginHorizontal="8dp"
                 android:elevation="8dp"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="@android:color/transparent"
                     android:gravity="center"
                     android:id="@+id/member5"
-                    android:textStyle="bold"
+
                     android:fontFamily="@font/belgrano"
                     android:text="Volunteer 5"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
@@ -209,19 +219,21 @@
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="8dp"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="@android:color/transparent"
                     android:gravity="center"
                     android:id="@+id/member6"
                     android:fontFamily="@font/belgrano"
-                    android:textStyle="bold"
+
                     android:text="Volunteer 6"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
@@ -234,97 +246,106 @@
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="8dp"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="@android:color/transparent"
                     android:gravity="center"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/belgrano"
-                    android:text="Volunteer 7"
                     android:id="@+id/member7"
+                    android:fontFamily="@font/belgrano"
+
+                    android:text="Volunteer 7"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/card_contact"
+                android:id="@+id/card_substitution"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
-                android:layout_marginHorizontal="8dp"
                 android:elevation="8dp"
                 android:layout_gravity="center"
+                android:layout_marginHorizontal="8dp"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="@android:color/transparent"
                     android:gravity="center"
                     android:id="@+id/member8"
                     android:fontFamily="@font/belgrano"
+
                     android:text="Volunteer 8"
-                    android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_other"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginHorizontal="8dp"
-                android:elevation="8dp"
                 android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:elevation="8dp"
+                android:layout_marginHorizontal="8dp"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
+                    android:background="@android:color/transparent"
                     android:gravity="center"
-                    android:fontFamily="@font/belgrano"
-                    android:text="Volunteer 9"
-                    android:textStyle="bold"
                     android:id="@+id/member9"
+                    android:fontFamily="@font/belgrano"
+
+                    android:text="Volunteer 9"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="300dp"
                 android:layout_height="60dp"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_gravity="center"
                 android:elevation="8dp"
-                android:onClick="onCardClick"
-                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="50dp"
                 android:padding="16dp"
-                app:cardCornerRadius="16dp">
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@android:color/transparent"> <!-- Transparent background -->
 
                 <TextView
-                    android:id="@+id/member10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/vac"
-                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
                     android:gravity="center"
-                    android:text="Volunteer 10"
+                    android:id="@+id/member10"
                     android:fontFamily="@font/belgrano"
+                    android:textStyle="bold"
+
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" /><!-- Transparent background -->
+
 
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
+
     </ScrollView>
 
 </RelativeLayout>

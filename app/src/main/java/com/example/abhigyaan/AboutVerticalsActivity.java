@@ -1,22 +1,29 @@
 package com.example.abhigyaan;
 
 import android.os.Bundle;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class AboutVerticalsActivity extends AppCompatActivity {
+
+    private ViewFlipper viewFlipper;
+    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_verticals);
 
-        ViewFlipper viewFlipper = findViewById(R.id.viewFlipper);
+        viewFlipper = findViewById(R.id.viewFlipper);
         LayoutInflater inflater = LayoutInflater.from(this);
 
         // Data arrays for titles, contents, and image resources
@@ -39,7 +46,7 @@ public class AboutVerticalsActivity extends AppCompatActivity {
         // Add 5 CardViews to the ViewFlipper
         for (int i = 0; i < 5; i++) {
             // Inflate the card view layout
-            androidx.cardview.widget.CardView cardView = (androidx.cardview.widget.CardView) inflater.inflate(R.layout.card_view_layout, null);
+            CardView cardView = (CardView) inflater.inflate(R.layout.card_view_layout, null);
 
             // Set the image, title, and content of the card view
             ImageView cardImage = cardView.findViewById(R.id.cardImage);
@@ -53,6 +60,39 @@ public class AboutVerticalsActivity extends AppCompatActivity {
 
             // Add the card view to the view flipper
             viewFlipper.addView(cardView);
+        }
+
+        gestureDetector = new GestureDetector(this, new MyGestureListener());
+
+        // Set onTouchListener to handle touch events
+        viewFlipper.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                gestureDetector.onTouchEvent(event);
+                return true;
+            }
+        });
+    }
+
+    private class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+        private static final int SWIPE_THRESHOLD = 100;
+        private static final int SWIPE_VELOCITY_THRESHOLD = 100;
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            float diffX = e2.getX() - e1.getX();
+            float diffY = e2.getY() - e1.getY();
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
+                    if (diffX > 0) {
+                        viewFlipper.showPrevious();
+                    } else {
+                        viewFlipper.showNext();
+                    }
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
