@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.firebase.bom)
     implementation(libs.firebase.messaging)
     implementation(libs.androidx.viewpager2)
+    implementation(libs.google.firebase.messaging)
 
 
     testImplementation(libs.junit)
