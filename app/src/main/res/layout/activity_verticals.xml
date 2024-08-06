@@ -257,20 +257,10 @@
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_show_users"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="16dp"
-            android:contentDescription="Show Users"
-            android:src="@drawable/group" />
 
 
 
     </LinearLayout>
-
 
 
 

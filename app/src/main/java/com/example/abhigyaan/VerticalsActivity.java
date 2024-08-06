@@ -1,3 +1,4 @@
+// VerticalsActivity.java
 package com.example.abhigyaan;
 
 import android.content.Intent;
@@ -6,16 +7,16 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class VerticalsActivity extends AppCompatActivity {
     Vibrator vibrate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verticals);
-        vibrate = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        vibrate=(Vibrator)getSystemService(VIBRATOR_SERVICE);
 
         // Find the TextViews by their IDs
         TextView eveningBatchTextView = findViewById(R.id.evening_batch);
@@ -29,10 +30,11 @@ public class VerticalsActivity extends AppCompatActivity {
         eveningBatchTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 // Navigate to evening_batch activity
-                Intent intent = new Intent(VerticalsActivity.this, EveningBatchActivity.class);
-                vibrate.vibrate(100);
-                startActivity(intent);
+               Intent intent = new Intent(VerticalsActivity.this, EveningBatchActivity.class);
+               vibrate.vibrate(100);
+               startActivity(intent);
             }
         });
 
@@ -42,7 +44,7 @@ public class VerticalsActivity extends AppCompatActivity {
                 // Navigate to project_disha activity
                 Intent intent = new Intent(VerticalsActivity.this, ProjectDishaActivity.class);
                 vibrate.vibrate(100);
-                startActivity(intent);
+               startActivity(intent);
             }
         });
 
@@ -50,9 +52,9 @@ public class VerticalsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to mess_batch activity
-                Intent intent = new Intent(VerticalsActivity.this, MessBatchActivity.class);
+               Intent intent = new Intent(VerticalsActivity.this, MessBatchActivity.class);
                 vibrate.vibrate(100);
-                startActivity(intent);
+               startActivity(intent);
             }
         });
 
@@ -80,17 +82,8 @@ public class VerticalsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to about_verticals activity
-                Intent intent = new Intent(VerticalsActivity.this, AboutVerticalsActivity.class);
+               Intent intent = new Intent(VerticalsActivity.this, AboutVerticalsActivity.class);
                 vibrate.vibrate(100);
-                startActivity(intent);
-            }
-        });
-
-        FloatingActionButton fabShowUsers = findViewById(R.id.fab_show_users);
-        fabShowUsers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(VerticalsActivity.this, UserListActivity.class);
                 startActivity(intent);
             }
         });

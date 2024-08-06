@@ -7,6 +7,8 @@ import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,16 +27,20 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private SignInClient oneTapClient;
     private BeginSignInRequest signInRequest;
-    private static final int REQ_ONE_TAP = 2;
+    private static final int REQ_ONE_TAP = 2;  // Can be any integer unique to the Activity.
 
-    Button mainsubmit;
+    Button callSign, mainsubmit;
+    ImageView imageView;
+    TextView welcome, signup3;
+    TextInputLayout usernamemain, password_togglemain;
+    Button btn;
+    Button newbtn;
     Vibrator vibrate;
 
     @SuppressLint("MissingInflatedId")
@@ -62,7 +68,7 @@ public class Login extends AppCompatActivity {
                 .setGoogleIdTokenRequestOptions(
                         BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
                                 .setSupported(true)
-                                .setServerClientId("93553756518-pabvpnnrglcl9lsckn0bs028t0kblpu3.apps.googleusercontent.com")
+                                .setServerClientId("93553756518-pabvpnnrglcl9lsckn0bs028t0kblpu3.apps.googleusercontent.com") // Ensure this is your server client ID
                                 .setFilterByAuthorizedAccounts(false)
                                 .build())
                 .build();
@@ -85,6 +91,8 @@ public class Login extends AppCompatActivity {
                         });
             }
         });
+
+
     }
 
     @Override
@@ -110,59 +118,14 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign-in successful
                             FirebaseUser user = mAuth.getCurrentUser();
-                            if (user != null) {
-                                String name = user.getDisplayName();
-                                String email = user.getEmail();
-
-                                // Store user information in Firebase Realtime Database and set loggedIn to true
-                                storeUserInformation(user.getUid(), name, email, true);
-
-                                // Navigate to the dashboard
-                                Intent intent = new Intent(Login.this, dashboard.class);
-                                startActivity(intent);
-                                finish();
-                            }
+                            Intent intent = new Intent(Login.this, dashboard.class);
+                            startActivity(intent);
+                            finish();
                         } else {
                             Toast.makeText(Login.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-    }
-
-    private void storeUserInformation(String uid, String name, String email, boolean loggedIn) {
-        // Get a reference to the Firebase Realtime Database
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-
-        // Create a User object to store in the database
-        User user = new User(name, email, loggedIn);
-
-        // Store the user information under the "users" node using the user's UID
-        databaseReference.child("users").child(uid).setValue(user)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        Log.d("Login", "User information stored successfully.");
-                    } else {
-                        Log.e("Login", "Failed to store user information: " + task.getException().getLocalizedMessage());
-                    }
-                });
-    }
-
-    // User class to represent the user information
-    public static class User {
-        public String name;
-        public String email;
-        public boolean loggedIn;
-
-        public User() {
-            // Default constructor required for calls to DataSnapshot.getValue(User.class)
-        }
-
-        public User(String name, String email, boolean loggedIn) {
-            this.name = name;
-            this.email = email;
-            this.loggedIn = loggedIn;
-        }
     }
 }
