@@ -28,12 +28,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private SignInClient oneTapClient;
     private BeginSignInRequest signInRequest;
-    private static final int REQ_ONE_TAP = 2;  // Can be any integer unique to the Activity.
+    private static final int REQ_ONE_TAP = 2;
+    private DatabaseReference mDatabase;
 
     Button callSign, mainsubmit;
     ImageView imageView;
@@ -50,30 +53,26 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         vibrate = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        // Check if the user is already signed in
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
-            // User is already signed in, navigate to the dashboard
             Intent intent = new Intent(Login.this, dashboard.class);
             startActivity(intent);
             finish();
         }
 
-        // Initialize One Tap client
         oneTapClient = Identity.getSignInClient(this);
         signInRequest = BeginSignInRequest.builder()
                 .setGoogleIdTokenRequestOptions(
                         BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
                                 .setSupported(true)
-                                .setServerClientId("93553756518-pabvpnnrglcl9lsckn0bs028t0kblpu3.apps.googleusercontent.com") // Ensure this is your server client ID
+                                .setServerClientId("93553756518-pabvpnnrglcl9lsckn0bs028t0kblpu3.apps.googleusercontent.com")
                                 .setFilterByAuthorizedAccounts(false)
                                 .build())
                 .build();
 
-        // Set up the button listener for Google sign-in
         mainsubmit = findViewById(R.id.mainsubmit);
         mainsubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,8 +90,6 @@ public class Login extends AppCompatActivity {
                         });
             }
         });
-
-
     }
 
     @Override
@@ -119,6 +116,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
+                            saveUserInfoToDatabase(user);
                             Intent intent = new Intent(Login.this, dashboard.class);
                             startActivity(intent);
                             finish();
@@ -127,5 +125,17 @@ public class Login extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private void saveUserInfoToDatabase(FirebaseUser user) {
+        User userInfo = new User(
+                user.getDisplayName(),
+                user.getEmail(),
+                user.getPhotoUrl() != null ? user.getPhotoUrl().toString() : null
+        );
+
+        mDatabase.child("users").child(user.getUid()).setValue(userInfo)
+                .addOnSuccessListener(aVoid -> Log.d("Firebase", "User info saved successfully"))
+                .addOnFailureListener(e -> Log.w("Firebase", "Error saving user info", e));
     }
 }

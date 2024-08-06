@@ -285,5 +285,19 @@
         android:backgroundTint="#DFE0E8"
         app:srcCompat="@drawable/volunteer"
         android:contentDescription="Profile" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_user_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/team"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#DFE0E8" />
+     <!-- Replace with your icon -->
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
